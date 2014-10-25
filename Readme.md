@@ -1,6 +1,6 @@
 #Notes
 
-Presentation given to TechCamp Memphis November 1, 2014.
+Presentation given to [TechCamp Memphis](http://techcampmemphis.com/) November 1, 2014.
 
 # SVG Animation
 
@@ -24,7 +24,7 @@ Presentation given to TechCamp Memphis November 1, 2014.
         - CSS Background (& base64 encode)
         - `<img>`
         - SVG nodes as DOM Elements (backend or raw)
-        - <object>
+        - `<object>`
     - Browser Support
         - Fallbacks / Progressive Enhancement
 * Animation
