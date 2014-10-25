@@ -1,0 +1,14 @@
+{
+  "name": "svg-talk",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-browser-sync": "*"
+  }
+}
