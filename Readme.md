@@ -1,3 +1,7 @@
+#Notes
+
+Presentation given to TechCamp Memphis November 1, 2014.
+
 # SVG Animation
 
 * [Polygon's SVG Xbox and PS4 Review](http://product.voxmedia.com/2013/11/25/5426880/polygon-feature-design-svg-animations-for-fun-and-profit)
@@ -18,12 +22,11 @@
 * From SVG to the Web
     - Ways to get SVG into DOM
         - CSS Background (& base64 encode)
-        - <img>
+        - `<img>`
         - SVG nodes as DOM Elements (backend or raw)
         - <object>
     - Browser Support
         - Fallbacks / Progressive Enhancement
-        
 * Animation
     - Ways to animate SMIL vs CSS vs Javascript
         - Pros and Cons
@@ -31,4 +34,6 @@
     - Line animation
     - Shape Morphing
 * Demonstration of SVG Animations
-    -Examples: 
+    - [SnapSVG](http://snapsvg.io/)
+    - [Codedrops Drawing Animation](http://tympanus.net/Development/SVGDrawingAnimation/)
+    
