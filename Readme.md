@@ -7,6 +7,8 @@ Presentation given to [TechCamp Memphis](http://techcampmemphis.com/) November 1
 * [Polygon's SVG Xbox and PS4 Review](http://product.voxmedia.com/2013/11/25/5426880/polygon-feature-design-svg-animations-for-fun-and-profit)
 * [CSS Tricks How SVG Line Animation Works](http://css-tricks.com/svg-line-animation-works/)
 * [Guide to SMIL Animation](http://css-tricks.com/guide-svg-animations-smil/)
+* [Can I use SMIL](http://caniuse.com/#feat=svg-smil)
+* [24 Ways SVG Line Animation](http://24ways.org/2013/animating-vectors-with-svg/)
 
 #Outline
 
@@ -15,6 +17,8 @@ Presentation given to [TechCamp Memphis](http://techcampmemphis.com/) November 1
         _ File Size
         - Scalability in Responsive
         - Editability
+    - SVG is not a solution for
+        - Photographic Images
 * From Illustrator to SVG
     - Gotchas
         - Illustrator will apply inline styles (can be moved to an external stylesheet)
@@ -25,6 +29,8 @@ Presentation given to [TechCamp Memphis](http://techcampmemphis.com/) November 1
         - `<img>`
         - SVG nodes as DOM Elements (backend or raw)
         - `<object>`
+    - SVG Sprites
+    - SVG Compression Tools
     - Browser Support
         - Fallbacks / Progressive Enhancement
 * Animation

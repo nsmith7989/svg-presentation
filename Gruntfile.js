@@ -30,7 +30,8 @@ module.exports = function (grunt) {
 		autoprefixer: {
 			single_file: {
 				options: {
-					browsers: ['last 4 version', 'ie 7' , 'ie 8', 'ie 9']
+					browsers: ['last 4 version', 'ie 7' , 'ie 8', 'ie 9'],
+                    map: true
 				},
 				src: 'css/style.css'
 			}
@@ -70,11 +71,14 @@ module.exports = function (grunt) {
 				bsFiles: {
 					src: [
                         '*/*.css',
-						'*/**.html'
+						'*.html'
                     ]
 				},
 				options: {
-					watchTask: true
+					watchTask: true,
+                    server: {
+                        baseDir: "./"
+                    }
 				}
 			}
 		}

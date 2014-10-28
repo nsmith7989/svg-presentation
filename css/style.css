@@ -1,3 +1,4 @@
+/* line 81, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .visuallyhidden {
   font-size: 0;
   height: 0;
@@ -9,6 +10,7 @@
   src: url('../fonts/OpenSans-Regular-webfont.eot');
   src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix'), url('../fonts/OpenSans-Regular-webfont.woff'), url('../fonts/OpenSans-Regular-webfont.ttf'), url('../fonts/OpenSans-Regular-webfont.svg#OpenSans-Regular-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .OpenSans-Regular-webfont {
   font-family: 'OpenSans-Regular-webfont', Arial, sans-serif; }
 
@@ -17,6 +19,7 @@
   src: url('../fonts/lato-bla-webfont.eot');
   src: url('../fonts/lato-bla-webfont.eot?#iefix'), url('../fonts/lato-bla-webfont.woff'), url('../fonts/lato-bla-webfont.ttf'), url('../fonts/lato-bla-webfont.svg#lato-bla-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-bla-webfont {
   font-family: 'lato-bla-webfont', Arial, sans-serif; }
 
@@ -25,6 +28,7 @@
   src: url('../fonts/lato-blaita-webfont.eot');
   src: url('../fonts/lato-blaita-webfont.eot?#iefix'), url('../fonts/lato-blaita-webfont.woff'), url('../fonts/lato-blaita-webfont.ttf'), url('../fonts/lato-blaita-webfont.svg#lato-blaita-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-blaita-webfont {
   font-family: 'lato-blaita-webfont', Arial, sans-serif; }
 
@@ -33,6 +37,7 @@
   src: url('../fonts/lato-bol-webfont.eot');
   src: url('../fonts/lato-bol-webfont.eot?#iefix'), url('../fonts/lato-bol-webfont.woff'), url('../fonts/lato-bol-webfont.ttf'), url('../fonts/lato-bol-webfont.svg#lato-bol-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-bol-webfont {
   font-family: 'lato-bol-webfont', Arial, sans-serif; }
 
@@ -41,6 +46,7 @@
   src: url('../fonts/lato-bolita-webfont.eot');
   src: url('../fonts/lato-bolita-webfont.eot?#iefix'), url('../fonts/lato-bolita-webfont.woff'), url('../fonts/lato-bolita-webfont.ttf'), url('../fonts/lato-bolita-webfont.svg#lato-bolita-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-bolita-webfont, .slide h2, section > header.slide > h1 {
   font-family: 'lato-bolita-webfont', Arial, sans-serif; }
 
@@ -49,6 +55,7 @@
   src: url('../fonts/lato-hai-webfont.eot');
   src: url('../fonts/lato-hai-webfont.eot?#iefix'), url('../fonts/lato-hai-webfont.woff'), url('../fonts/lato-hai-webfont.ttf'), url('../fonts/lato-hai-webfont.svg#lato-hai-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-hai-webfont {
   font-family: 'lato-hai-webfont', Arial, sans-serif; }
 
@@ -57,6 +64,7 @@
   src: url('../fonts/lato-haiita-webfont.eot');
   src: url('../fonts/lato-haiita-webfont.eot?#iefix'), url('../fonts/lato-haiita-webfont.woff'), url('../fonts/lato-haiita-webfont.ttf'), url('../fonts/lato-haiita-webfont.svg#lato-haiita-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-haiita-webfont {
   font-family: 'lato-haiita-webfont', Arial, sans-serif; }
 
@@ -65,6 +73,7 @@
   src: url('../fonts/lato-lig-webfont.eot');
   src: url('../fonts/lato-lig-webfont.eot?#iefix'), url('../fonts/lato-lig-webfont.woff'), url('../fonts/lato-lig-webfont.ttf'), url('../fonts/lato-lig-webfont.svg#lato-lig-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-lig-webfont, .slide h2, #intro .attribution {
   font-family: 'lato-lig-webfont', Arial, sans-serif; }
 
@@ -73,6 +82,7 @@
   src: url('../fonts/lato-ligita-webfont.eot');
   src: url('../fonts/lato-ligita-webfont.eot?#iefix'), url('../fonts/lato-ligita-webfont.woff'), url('../fonts/lato-ligita-webfont.ttf'), url('../fonts/lato-ligita-webfont.svg#lato-ligita-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-ligita-webfont {
   font-family: 'lato-ligita-webfont', Arial, sans-serif; }
 
@@ -81,6 +91,7 @@
   src: url('../fonts/lato-reg-webfont.eot');
   src: url('../fonts/lato-reg-webfont.eot?#iefix'), url('../fonts/lato-reg-webfont.woff'), url('../fonts/lato-reg-webfont.ttf'), url('../fonts/lato-reg-webfont.svg#lato-reg-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-reg-webfont {
   font-family: 'lato-reg-webfont', Arial, sans-serif; }
 
@@ -89,6 +100,7 @@
   src: url('../fonts/lato-regita-webfont.eot');
   src: url('../fonts/lato-regita-webfont.eot?#iefix'), url('../fonts/lato-regita-webfont.woff'), url('../fonts/lato-regita-webfont.ttf'), url('../fonts/lato-regita-webfont.svg#lato-regita-webfont'); }
 
+/* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/utility/_functions.scss */
 .lato-regita-webfont {
   font-family: 'lato-regita-webfont', Arial, sans-serif; }
 
@@ -100,21 +112,25 @@
 /**
  * "Variables"
  */
+/* line 12, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .slide, .delayed, .delayed-children > * {
   -webkit-transition: 0.5s;
-  transition: 0.5s;
+          transition: 0.5s;
   -webkit-transition-property: -webkit-transform, opacity, left, top, right, bottom, background;
-  transition-property: transform, opacity, left, top, right, bottom, background; }
+          transition-property: transform, opacity, left, top, right, bottom, background; }
 
 /**
  * Styles
  */
+/* line 21, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 html, body {
   height: 100%; }
 
+/* line 25, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 body {
   margin: 0; }
 
+/* line 29, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .slide {
   display: none;
   position: absolute;
@@ -126,11 +142,13 @@ body {
   font-size: 250%;
   line-height: 1.6; }
 
+/* line 43, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .slide.previous, .slide:target, .slide.next {
   display: block;
   visibility: hidden;
   overflow: hidden; }
 
+/* line 49, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .slide:target {
   z-index: 100;
   opacity: 1;
@@ -140,6 +158,7 @@ body {
 /**
     Slide numbers
  */
+/* line 59, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #indicator {
   position: absolute;
   top: 0.05in;
@@ -153,13 +172,13 @@ body {
   text-align: center;
   padding: 0.1em 0.3em 0;
   min-width: 1.6em;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 999px; }
 
 /**
      On-screen navigation
  */
+/* line 80, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #onscreen-nav {
   z-index: 1010;
   position: absolute;
@@ -170,15 +189,18 @@ body {
   font-size: 150%;
   opacity: 0;
   -webkit-transition: 1s opacity;
-  transition: 1s opacity; }
+          transition: 1s opacity; }
 
+/* line 92, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #onscreen-nav:hover {
   opacity: 1; }
 
+/* line 96, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #onscreen-nav:not(:hover) button {
   margin-top: -1.5em;
   pointer-events: none; }
 
+/* line 101, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 button.onscreen-nav {
   float: right;
   padding: 0.2em 0.5em;
@@ -190,34 +212,42 @@ button.onscreen-nav {
   text-transform: uppercase;
   cursor: pointer; }
 
+/* line 113, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 button.onscreen-nav:hover {
   background: black; }
 
+/* line 117, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 button.onscreen-nav.prev {
   float: left; }
 
 /* If there's nothing selected, show the first */
+/* line 122, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .slide:first-child {
   z-index: 2; }
 
 /* Delayed items that are shown incrementally after the slide is */
+/* line 128, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .delayed, .delayed-children > * {
   opacity: 0; }
 
+/* line 133, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .delayed.displayed, .delayed-children > .displayed {
   opacity: 0.3; }
 
+/* line 143, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .delayed.current, .delayed-children > .current, .delayed.displayed.non-dismissable, .delayed-children > .displayed.non-dismissable, .delayed.displayed.persistent, .delayed-children > .displayed.persistent, .delayed-children.persistent > .displayed {
   opacity: 1; }
 
 /**
     iframe slides
  */
+/* line 150, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .iframe.slide {
   padding: 0 !important;
   background: white;
   text-align: center; }
 
+/* line 156, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .iframe.slide > h1 {
   position: absolute;
   bottom: 0;
@@ -226,6 +256,7 @@ button.onscreen-nav.prev {
   background: rgba(0, 0, 0, 0.5);
   font-size: 100%; }
 
+/* line 163, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .iframe.slide > h1 > a {
   display: inline-block;
   padding: 0.2em 0.5em;
@@ -234,6 +265,7 @@ button.onscreen-nav.prev {
   text-decoration: none;
   text-shadow: 0 -0.05em 0.05em black; }
 
+/* line 174, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .slide > iframe:only-of-type, iframe.csss-import {
   position: absolute;
   top: 0;
@@ -243,11 +275,12 @@ button.onscreen-nav.prev {
   height: 100%;
   margin: 0; }
 
-
+/* line 188, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 iframe.csss-import:not(.show) {
   z-index: -1;
   visibility: hidden; }
 
+/* line 193, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 iframe.csss-import.show {
   visibility: visible;
   z-index: 101; }
@@ -255,13 +288,14 @@ iframe.csss-import.show {
 /**
     Show thumbnails
  */
+/* line 202, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails {
   overflow-x: hidden; }
 
+/* line 207, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails .slide, .presenter .slide.next {
   width: 1024px;
   height: 768px;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   overflow: hidden;
@@ -270,32 +304,39 @@ iframe.csss-import.show {
   margin: -292px -395px;
   cursor: pointer;
   -webkit-transform: scale(0.2, 0.2);
-  -ms-transform: scale(0.2, 0.2);
-  transform: scale(0.2, 0.2);
+      -ms-transform: scale(0.2, 0.2);
+          transform: scale(0.2, 0.2);
   -webkit-transition: 1s -webkit-transform;
-  transition: 1s transform; }
+          transition: 1s transform; }
 
+/* line 223, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails.headers-only .slide {
   display: none; }
 
+/* line 227, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails.headers-only header.slide {
   display: block; }
 
+/* line 232, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails .slide .delayed, .presenter .slide:target + .slide .delayed {
   opacity: 1; }
 
+/* line 238, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails .slide:hover, .show-thumbnails .slide:target, .presenter .slide:target + .slide {
   outline: 20px solid rgba(255, 255, 255, 0.6);
   outline-radius: 5px;
   box-shadow: 5px 5px 10px black; }
 
+/* line 245, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails .slide:target {
   outline-color: rgba(255, 255, 255, 0.3); }
 
+/* line 249, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails .slide:target:hover {
   outline-color: rgba(255, 255, 255, 0.9); }
 
 /* Display titles */
+/* line 254, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .show-thumbnails .slide[data-title]:after {
   content: attr(data-title);
   position: absolute;
@@ -309,16 +350,18 @@ iframe.csss-import.show {
   text-align: center;
   text-shadow: 0.05em 0.05em 0.1em black;
   -webkit-transform: none;
-  -ms-transform: none;
-  transform: none; }
+      -ms-transform: none;
+          transform: none; }
 
 /* Hide all elements in slide by hitting Ctrl + J or Shift + J */
+/* line 270, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .hide-elements .slide:target > * {
   opacity: 0;
   -webkit-transition: 0.5s;
-  transition: 0.5s; }
+          transition: 0.5s; }
 
 /* Timer */
+/* line 277, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #timer {
   position: absolute;
   top: 0;
@@ -331,29 +374,33 @@ iframe.csss-import.show {
   background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   text-align: right;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: linear;
-  transition: linear; }
+          transition: linear; }
 
+/* line 293, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #timer:before {
   content: 'Progress ';
   text-transform: uppercase;
   color: white;
   font-size: 9px; }
 
+/* line 300, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #timer.end {
   width: 100%; }
 
+/* line 304, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 #timer.end.overtime {
   width: 0%;
   left: auto;
   right: 0; }
 
 /* Presenter & projector views */
+/* line 312, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .projector #timer {
   display: none; }
 
+/* line 316, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .presenter-notes {
   display: none;
   position: fixed;
@@ -372,6 +419,7 @@ iframe.csss-import.show {
   text-shadow: 0 1px white;
   box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.5) inset; }
 
+/* line 335, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .presenter .slide.next {
   position: fixed;
   top: auto;
@@ -380,6 +428,7 @@ iframe.csss-import.show {
   left: auto;
   z-index: 100; }
 
+/* line 344, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_slideshow.scss */
 .presenter .slide:target > .presenter-notes {
   display: block; }
 
@@ -392,9 +441,11 @@ iframe.csss-import.show {
 /**
  * Variables
  */
+/* line 11, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide {
   background-clip: none; }
 
+/* line 14, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide:target {
   display: -webkit-box;
   display: -webkit-flex;
@@ -403,63 +454,74 @@ iframe.csss-import.show {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  /* line 17, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
   .slide:target > p, .slide:target > img {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
+        -ms-flex: 1;
+            flex: 1; }
 
+/* line 22, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide.no-flex:target {
   display: block; }
-
 
 /**
  * Styles
  */
+/* line 35, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 * {
   padding: 0;
   margin: 0;
   font: inherit;
   color: inherit; }
 
+/* line 42, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 html {
   background-size: cover; }
 
+/* line 47, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 body {
   font-family: sans-serif; }
 
+/* line 51, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 button {
   padding: 0.2em 0.5em; }
 
+/* line 55, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 a:hover {
   text-shadow: 0 0 0.5em white, 0 0 1em white; }
 
+/* line 59, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 select {
   color: black; }
 
+/* line 63, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 code, pre, style, textarea, input {
   font-family: Consolas, 'Andale Mono', 'Courier New', monospace;
   background: rgba(0, 0, 0, 0.4); }
 
+/* line 69, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 code {
   font-family: Monaco;
   padding: 0.1em;
   white-space: nowrap;
   border-radius: 0.2em;
-  border: 3px solid #e48632;
+  border: 3px solid #2D5F86;
   background: #fff;
-  color: #6f5a40;
+  color: #1D3F58;
   text-shadow: none;
   margin: 10px 0; }
 
+/* line 82, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 pre, style, textarea {
   padding: 0.3em 0.5em;
   margin-left: -0.1em;
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0.1em 0.1em 0.5em black inset; }
 
+/* line 89, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 pre > code {
   padding: 0;
   white-space: pre;
@@ -467,17 +529,20 @@ pre > code {
   background: 0;
   box-shadow: none; }
 
+/* line 97, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 textarea {
   width: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* line 102, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 strong, b {
   font-weight: bold; }
 
+/* line 106, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 pre strong {
   text-shadow: 0 0 0.6em white; }
 
+/* line 110, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide {
   padding: 0 2.5% 2%;
   background: rgba(0, 0, 0, 0.7);
@@ -485,10 +550,12 @@ pre strong {
   color: white;
   border: 30px solid transparent; }
 
+/* line 118, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 section > header.slide > h1 {
-  text-shadow: 0.05em 0.05em 0.1em rgba(111, 90, 64, 0.4);
+  text-shadow: 0.05em 0.05em 0.1em rgba(29, 63, 88, 0.4);
   font-family: lato-bla-webfont;
   text-transform: uppercase; }
+  /* line 122, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
   section > header.slide > h1 + .subtitle {
     position: absolute;
     top: 60%;
@@ -498,50 +565,62 @@ section > header.slide > h1 {
     line-height: 1;
     text-align: center;
     text-shadow: none;
-    color: #6f5a40; }
+    color: #1D3F58; }
 
+/* line 135, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 #indicator {
   background: rgba(255, 255, 255, 0.6);
   color: black;
   text-shadow: 0.03em 0.03em 0.1em white; }
 
+/* line 141, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide h2 {
   font-weight: 100;
   font-size: 0.75in; }
 
+/* line 149, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide p, .slide li {
   font-weight: bold;
   letter-spacing: -0.03em; }
 
+/* line 154, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide > ul {
   list-style: none; }
 
+/* line 158, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide ol {
   margin-left: 2em; }
 
+/* line 162, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide > ul ul {
   margin-left: 2em;
   list-style: none; }
 
+/* line 167, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide li li {
   font-size: 80%; }
 
+/* line 171, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide li {
   margin: 0.2em 0; }
 
+/* line 175, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide > ul > li:before {
   content: '\2714';
   color: #a0c12c;
   padding-right: 0.2em; }
 
+/* line 181, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide li li:before {
   content: '\279C';
   color: #28bcbc;
   padding-right: 0.2em; }
 
+/* line 187, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 section > header.slide {
-  background-color: #e48632; }
+  background-color: #2D5F86; }
 
+/* line 191, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 section > header.slide > h1 {
   position: absolute;
   top: 50%;
@@ -552,6 +631,7 @@ section > header.slide > h1 {
   line-height: 1;
   text-align: center; }
 
+/* line 202, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide .emphasis {
   padding: 0.4em 0.5em 0.3em;
   margin: 0.3em 0;
@@ -566,9 +646,11 @@ section > header.slide > h1 {
   border-radius: 0.3em;
   box-shadow: 0.1em 0.1em 0.5em black; }
 
+/* line 216, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .light.slide .emphasis {
   box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.4); }
 
+/* line 220, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .slide .emphasis::before {
   content: '\279C';
   color: rgba(255, 255, 255, 0.5);
@@ -585,9 +667,10 @@ section > header.slide > h1 {
   text-shadow: none;
   border-radius: 999px;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
 
+/* line 238, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .attribution {
   background: rgba(0, 0, 0, 0.8);
   color: white;
@@ -600,54 +683,70 @@ section > header.slide > h1 {
   font-size: 30%;
   text-shadow: 0.05em 0.05em 0.1em black; }
 
+/* line 251, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .attribution a {
   text-decoration: none; }
 
+/* line 255, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .attribution a::after {
   content: ' (' attr(href) ')'; }
 
 /* Syntax highlighting */
+/* line 261, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .comment {
   color: #999; }
 
+/* line 265, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .string {
   color: yellow; }
 
+/* line 269, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .keyword {
   font-weight: bold;
   color: deeppink; }
 
+/* line 274, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .number, .boolean {
   color: #0cf; }
 
+/* line 278, /Users/nathanaelsmith/projects/techcamp-presentation/sass/lib/_theme.scss */
 .regex {
   color: orange; }
 
+/* line 2, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 p {
   font-family: lato-reg-webfont, arial, sans-serif; }
+  /* line 4, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   p em {
     font-family: lato-blaita-webfont, arial, sans-serif; }
 
+/* line 9, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 .slide {
   background: rgba(0, 0, 0, 0.9); }
+  /* line 12, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide p.dev {
-    color: #aa8e6b;
+    color: #3676a5;
     line-height: 1;
     margin-bottom: 20px; }
+  /* line 18, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide p.prod {
     color: #80bd01;
     line-height: 1;
     margin-bottom: 40px; }
+  /* line 23, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide .hyperlink {
     color: #4d4dff;
     text-decoration: underline; }
 
+/* line 29, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #timer {
   display: none; }
 
+/* line 33, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 .delayed.displayed.no-dim {
   opacity: 1; }
 
+/* line 37, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #intro {
   background: #f5f6f6;
   padding: 0;
@@ -656,40 +755,48 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  /* line 43, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   #intro img {
     display: block;
     margin: 20px auto; }
 
+/* line 50, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #intro h1 {
   width: 60%;
   margin: 5% auto 0;
-  color: #6f5a40;
+  color: #1D3F58;
   text-shadow: none; }
 
+/* line 57, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #intro .attribution {
   font-weight: bold;
   text-align: center;
   font-size: 100%;
   line-height: 1;
-  color: #e48632;
+  color: #2D5F86;
   text-shadow: none; }
 
+/* line 67, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 .rf-intro {
   background: #0075d6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  /* line 70, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .rf-intro img {
     display: block;
     margin: 0 auto 100px; }
 
+/* line 77, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #css-controls-demo label {
   display: block; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
   /* hack to avoid using the Object element in Safari/WebKit, due to WebKit Bug 27190 */
+  /* line 83, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   object[type="image/svg+xml"] {
-    display: none; } }
+    display: none; }
 
-/*# sourceMappingURL=undefined */
+ }
+/*# sourceMappingURL=style.css.map */

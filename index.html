@@ -1,257 +1,360 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>CSSS: A brief introduction</title>
-	
-	<link href="slideshow.css" rel="stylesheet" />
-	<link href="theme.css" rel="stylesheet" />
-	<link href="talk.css" rel="stylesheet" />
-	<script src="prefixfree.min.js"></script>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Techcamp SVG Presentation</title>
+
+    <!-- Don't alter this, CSSS needs it to work -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+
+    <!-- Take care of prefixes -->
+    <!--<script src="prefixfree.min.js"></script>-->
+
+
 </head>
-<body data-duration="10">
+<body data-duration="45">
 
 <header id="intro" class="slide">
-	<h1>
-		<object data="logo.svg" width="100%" type="image/svg+xml">
-			<img src="logo.png" alt="CSSS: CSS-based SlideShow System" />
-		</object>
-	</h1>
-	<p class="attribution">By Lea Verou</p>
+    <div style="margin: 0 auto" class="svg-wrap">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 width="1100px" height="1700px" viewBox="0 0 900 900" enable-background="new 0 0 900 900" xml:space="preserve">
+<path id="s" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M181.313,7.362
+	c0,0-153.665,59.486-3.965,122.935c149.7,63.448,15.863,128.882-5.949,131.856"/>
+<path id="v" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M212.736,1.06l92.128,244.015
+	c0,0,44.817-234.056,64.738-234.056"/>
+            <path id="g_1" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M470.362,13.352
+	c0,0-268.703,198.635,10.871,233.333c0,0,111.035,8.923,84.227-84.028"/>
+            <path id="g_2" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M523.5,162.5 565.5,161.5 584.5,220.5 "/>
+
+	<path id="underline" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M1.12,361.135
+		c0,0,325.177-130.865,593.845-81.295"/>
+</svg>
+
+        <script>
+            $.noConflict();
+            (function($) {
+                (function() {
+                    window.signature = {
+                        initialize: function() {
+                            return $( '.svg-wrap svg' ).each( function() {
+                                var delay, length, path, paths, previousStrokeLength, speed, _i, _len, _results;
+                                paths = $( 'path, circle, rect', this );
+                                delay = 0;
+                                _results = [];
+                                for(_i = 0, _len = paths.length; _i < _len; _i++) {
+                                    path = paths[_i];
+                                    length = path.getTotalLength();
+                                    previousStrokeLength = speed || 0;
+                                    speed = length < 100 ? 20 : Math.floor( length );
+                                    delay += previousStrokeLength + 500;
+                                    _results.push( $( path ).css( 'transition', 'none' ).attr( 'data-length', length ).attr( 'data-speed', speed ).attr( 'data-delay', delay ).attr( 'stroke-dashoffset', length ).attr( 'stroke-dasharray', length + ',' + length ) );
+                                }
+                                return _results;
+                            } );
+                        },
+                        animate: function() {
+                            return $( '.svg-wrap svg' ).each( function() {
+                                var delay, length, path, paths, speed, _i, _len, _results;
+                                paths = $( 'path, circle, rect', this );
+                                _results = [];
+                                for(_i = 0, _len = paths.length; _i < _len; _i++) {
+                                    path = paths[_i];
+                                    length = $( path ).attr( 'data-length' );
+                                    speed = $( path ).attr( 'data-speed' );
+                                    delay = $( path ).attr( 'data-delay' );
+                                    _results.push( $( path ).css( 'transition', 'stroke-dashoffset ' + speed + 'ms ' + delay + 'ms linear' ).attr( 'stroke-dashoffset', '0' ) );
+                                }
+                                return _results;
+                            } );
+                        }
+                    };
+
+                    $( document ).ready( function() {
+                        window.signature.initialize();
+                        return $( 'button' ).on( 'click', function() {
+                            window.signature.initialize();
+                            return setTimeout( function() {
+                                return window.signature.animate();
+                            }, 500 );
+                        } );
+                    } );
+
+                    $( window ).load( function() {
+                        return window.signature.animate();
+                    } );
+
+                }).call( this );
+            })( jQuery )
+        </script>
+
+    </div>
+    <p class="attribution">Using Vectors on the web with SVG</p>
 </header>
+
+<header class="slide rf-intro">
+    <img class="no-dim" src="img/RF_logo_cmyk.svg" alt=""/>
+
+    <p>Nathanael Smith</p>
+
+    <p class="no-dim">Font End / UI Developer at RocketFuel</p>
+
+    <p class="no-dim">Twitter: @nsmith2</p>
+
+    <p class="no-dim">GitHub: nsmith7989</p>
+
+    <p class="no-dim">nathanael@gorocketfuel.com</p>
+
+
+</header>
+
 <section>
-	<header class="slide">
-		<h1>Introduction</h1>
-	</header>
-	
-	<section class="slide" title="CSSS: Introduction">
-		<h2>What is it?</h2>
-		<p>A simple framework for building presentations with modern web standards</p>
-		<ul>
-			<li class="delayed">An HTML file contains the whole presentation</li>
-			<li class="delayed">Themes as CSS files</li>
-			<li class="delayed">JavaScript handles what CSS can't (keyboard shortcuts etc)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>History</h2>
-		<ul>
-			<li class="delayed">I had to create a presentation for my talk at <a href="http://front-trends.com">Front Trends 2010</a></li>
-			<li class="delayed">The only web-based presentation systems I knew of didn't fit my needs</li>
-			<li class="delayed">&hellip;so I rolled up my own</li>
-			<li class="delayed">FT2010 attendees asked me to release it</li>
-			<li class="delayed">and here it is! ;-)</li>
-		</ul>
-	</section>
-	
-	<section class="slide" id="navigation">
-		<h2>Navigation</h2>
-		<p>Only through keyboard for now :(</p>
-		<ul>
-			<li>→ or ↓ to advance to the next slide or incrementally displayed item</li>
-			<li>← or ↑ to go to the previous slide or incrementally displayed item</li>
-			<li>Ctrl* + → or Ctrl* + ↓ to jump to the next slide</li>
-			<li>Ctrl* + ← or Ctrl* + ↑ to jump to the previous slide</li>
-			<li>Home to go to the first slide, End to go to the last</li>
-			<li>Ctrl* + G to jump to an arbitrary slide (by slide number or identifier)</li>
-		</ul>
-		<p>* Ctrl or Shift actually. Only Shift works in Opera.</p>
-	</section>
+    <header class="slide">
+        <h1>Grunt</h1>
+        <span class="subtitle">Why?</span>
+    </header>
+
+    <section class="slide no-flex">
+        <h2>Do these things:</h2>
+
+        <p class="delayed dev">Work in modular chunks of CSS and JS</p>
+
+        <p class="delayed prod">But in production everything should be smushed together</p>
+
+        <p class="delayed dev">Use compelling, high quality images</p>
+
+        <p class="delayed prod">But in production everything should be as small as possible</p>
+
+        <p class="delayed dev">Develop quickly and semantically</p>
+
+        <p class="delayed prod">But make it work in ancient browsers</p>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>Grunt helps</h2>
+
+        <p class="delayed">Bajillion plugins that alleviate the repetative pain of front end development</p>
+        <ul>
+            <li class="delayed">CSS Preprocessing</li>
+            <li class="delayed">Image Minification</li>
+            <li class="delayed">JS Test Running</li>
+            <li class="delayed">JS concatination</li>
+            <li class="delayed">JS minification</li>
+            <li class="delayed">HandleBars Precompilation</li>
+            <li class="delayed">SFTP Deployment</li>
+            <li class="delayed">JS/CSS Linting</li>
+            <li class="delayed">console.log removal</li>
+            <li class="delayed">SVG to Icon Font Generation</li>
+            <li class="delayed">Browser Syncing / Visual Testing</li>
+        </ul>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>But I already have:</h2>
+        <ul>
+            <li>Codekit</li>
+            <li>LiveReload</li>
+            <li>Compass Watch</li>
+            <li>All the other things...</li>
+        </ul>
+        <p class=delayed>Grunt combines or replaces multiple build tools into extremely powerful workflows</p>
+    </section>
 </section>
 
 <section>
-	<header class="slide">
-		<h1>Features</h1>
-	</header>
-	
-	<section class="slide">
-		<h2>Thumbnail view</h2>
-		<p>Press Ctrl+H (or Shift+H if you're in Opera) now.</p>
-		<p class="delayed">Cool, huh? You can press Ctrl+Shift+H to see all slides (warning: can be slow!)</p>
-	</section>
-	
-	<section class="slide">
-		<h2>Timer</h2>
-		<ul>
-			<li>Timer in the form of a progress bar on the top</li>
-			<li>Define the talk duration with the attribute <code>data-duration</code> on the <code>body</code></li>
-			<li>Style the timer and the end state with the selectors <code>#timer</code> and <code>#timer.end</code> respectively.</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Presenter view</h2>
-		<p>This slide has presenter notes. They are only visible in presenter view (Ctrl+P or Shift+P).</p>
-		<p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-	
-	<section class="slide">
-		<style scoped>
-			h2 {
-				font-size: 200%;
-				font-weight: bold;
-			}
-		</style>
-		<h2><code>&lt;style scoped /&gt;</code></h2>
-		<p>You can use the HTML5 <code>scoped</code> attribute on style elements in slides, to only style the current slide or inside sections that include multiple slides to style all of them and nothing else.</p>
-		<p>For example, inspect this slide and then run <code>$$('style[scoped]')[0].sheet.cssRules[0].selectorText</code> in the console to see how the original selector gets changed.</p>
-	</section>
-	
-	<section class="slide">
-		<h2>More features</h2>
-		<ul>
-			<li class="delayed">IDs are dynamically assigned by JavaScript&hellip;</li>
-			<li class="delayed">&hellip;but you can also assign your own, bringing the best of both worlds</li>
-			<li class="delayed">Incremental display of slide contents (just add <code>class="delayed"</code>)</li>
-			<li class="delayed">Slide scaling based on window size (size everything you want to be scalable in ems)</li>
-			<li class="delayed">Document.title changing according to slide title (fetched either from the <code>title</code> attribute or the slide's heading)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Drawbacks</h2>
-		<ul>
-			<li>Only supports modern browsers. Why?
-				<ul>
-					<li>More lightweight</li>
-					<li>Easier to understand code</li>	
-					<li>It's a presentation, so the environment is controlled anyway</li>
-				</ul>
-			</li>
-			<li>No mouse click to advance to the next slide. I consider it annoying.</li>
-			<li>Doesn't work in mobile :(</li>
-		</ul>
-	</section>
+    <header class="slide">
+        <h1>Grunt</h1>
+        <span class="subtitle">What?</span>
+    </header>
+
+    <section class="slide no-flex">
+        <h2>Grunt is built on Node.js</h2>
+        <img class="delayed no-dim" src="http://nodejs.org/images/logo.svg" alt="Node Logo">
+
+        <p class="delayed no-dim" style="text-align: center">nodejs.org</p>
+
+        <p class="delayed">Javascript Environment that can interact with your local file system</p>
+
+        <p class="delayed">Anything node can do, Grunt can do.</p>
+
+        <p class="delayed" style="text-decoration: underline">Grunt is a system for running node scripts.</p>
+    </section>
 </section>
 
 <section>
-	<header class="slide">
-		<h1>Plugins</h1>
-	</header>
-	
-	<section class="slide">
-		<h2>Plugin: CSS Snippets</h2>
-		<pre>new CSSSnippet(document.getElementById('snippet'));</pre>
-		<ul>
-			<li>Dynamically edit CSS and reflect the results in any element's style
-				<ul>
-					<li>Which one? Specify a selector with the <code>data-subject</code> attribute or leave blank for the slide to be the subject</li>
-				</ul>
-			<li>Automatically prefixes CSS3 properties/values, when needed
-				<ul>
-					<li>Also does it with the style attribute (statically) if the element is not a text field (doesn't work in IE and Firefox 3.6)</li>
-				</ul>
-			</li>
-			<li>Textarea automatically adjusts rows/font-size on line break (use class <code>dont-adjust</code> to turn off)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>CSS Snippets demo</h2>
-		<p>Edit the following CSS code:</p>
-		<textarea class="snippet">background-color:red;
-background-image: linear-gradient(red, #600)</textarea>
-	</section>
-	
-	<section class="slide" id="animation-demo">
-		<h2>CSS Snippets: raw CSS</h2>
-		<textarea class="snippet" data-raw>@keyframes rainbow {
-	from, to { background: red }
-	16% { background: yellow }
-	33% { background: green }
-	50% { background: aqua }
-	66% { background: blue }
-	83% { background: fuchsia }
+    <header class="slide">
+        <h1>Grunt</h1>
+        <span class="subtitle">Installation.</span>
+    </header>
+
+    <section class="slide no-flex">
+        <h2>Install Steps</h2>
+        <ol>
+            <li>Install Node <a target=_blank href="http://nodejs.org"><span class="hyperlink">nodejs.org</span></a>
+            </li>
+            <li class=delayed>Install Grunt <code>npm install -g grunt-cli</code></li>
+        </ol>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>Usage Steps</h2>
+
+        <p class="delayed">Grunt configuration is per project</p>
+
+        <p class="delayed">Based on two files</p>
+        <ol>
+            <li class="delayed"><code>package.json</code></li>
+            <li class="delayed"><code>Gruntfile.js</code></li>
+        </ol>
+        <p class="delayed">Get these by using a generator e.g. <code>npm install grunt-init -g</code></p>
+
+        <p class="delayed">or by manually creating them...</p>
+    </section>
+
+    <section class="slide no-flex">
+        <h2><code>package.json</code></h2>
+		<pre lang="javascript">
+{
+  "name": "WebWorkers-Gruntification",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-sass": "~0.12.0",
+    "browser-sync": "^0.7.3"
+  }
 }
+		</pre>
+        <p class="delayed"><code>npm install grunt-contrib-watch --save-dev</code></p>
+    </section>
 
-#animation-demo { animation: 30s rainbow infinite; }</textarea>
-	</section>
-	
-	<section class="slide">
-		<h2>Plugin: CSS Controls</h2>
-		<ul>
-			<li>Use sliders and other controls to adjust CSS values
-				<ul>
-					<li>Which one? Specify a selector with the <code>data-subject</code> attribute or leave blank for the slide to be the subject</li>
-					<li>Specify style with <code>data-style</code> (use <code>{value}</code> where the result will be)</li>
-				</ul>
-			<li>Automatically prefixes CSS3 properties/values, when needed</li>
-		</ul>
-	</section>
-	
-	<section class="slide" id="css-controls-demo">
-		<h2>CSS Controls demo</h2>
-		<label>Slide lightness: 
-			<input type="range" min="0" max="255" value="128" data-style="background-color:rgb({value}, {value}, {value});" class="css-control" />
-		</label>
-		<label>
-			border-width:
-			<input type="number" min="0" max="60" value="30" data-style="border-width: {value}px;" class="css-control" size="5" />
-		</label>
-		<label>
-			font-family:
-			<select data-style="font-family: {value};" class="css-control">
-				<option selected>sans-serif</option>
-				<option>Georgia, serif</option>
-				<option>Consolas, monospace</option>
-				<option>'Trebuchet MS', sans-serif</option>
-			</select>
-		</label>
-	</section>
-	
-	<section class="slide">
-		<h2>Plugin: Code highlight</h2>
-		<ul>
-			<li>Syntax highlighting for every <code>&lt;code&gt;</code> element with a <code>lang</code> attribute.</li>
-			<li>Only highlights when the slide becomes active, for performance</li>
-			<li>Currently only supports JavaScript, but it's easy to add any language</li>
-			<li>Styling done through easy to understand classes like <code>.string</code> or <code>.comment</code></li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Code highlight example</h2>
-		<pre><code lang="javascript">// Comment
-document.addEventListener('DOMAttrModified',function(e) {
-  var node = e.target, attr = e.attrName;
-  if(/^input$/i.test(node.nodeName) 
-    &amp;&amp; (attr === 'placeholder' || attr === 'value')
-    || foo > 5)
-      Placeholder.update(node);
-}, false);</code></pre>
-	</section>
+
+    <section class="slide no-flex">
+        <h2><code>Gruntfile.js</code></h2>
+		<pre lang="javascript">
+module.exports = function(grunt) {
+
+  // Project configuration.
+  grunt.initConfig({
+
+  uglify: {
+      //tasks options/config here
+    }
+   
+  });
+  //load tasks here
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  //name tasks here
+  grunt.registerTask('default', ['concat','uglify']);
+
+};
+		</pre>
+    </section>
+
 </section>
-<footer class="slide" title="The End">
-	<h2>Thank you!</h2>
-	<p>Get it or contribute at <a href="http://github.com/LeaVerou/CSSS">http://github.com/LeaVerou/CSSS</a></p>
-	<p>Credits:</p>
-	<ul>
-		<li><a href="http://lukeroberts.us/2008/12/wallpaper-colourful-wood/">Colored wood background by Luke Roberts</a></li>
-		<li>The name CSSS is actually inspired by S5, as you could probably guess ;-)</li>
-		<li>A big thanks to the community at Github for various contributions to this project</li>
-	</ul>
+
+<section>
+    <header class="slide">
+        <h1>Grunt</h1>
+        <span class="subtitle">Example Workflow.</span>
+    </header>
+    <section class="slide no-flex">
+        <h2>What We're Doing</h2>
+
+        <p class="delayed">Responsive Wordpress Theme (Zurb Foundation)</p>
+
+        <h3 class="delayed">What We Want (development)</h3>
+        <ul>
+            <li class="delayed">Sass Compilation (grunt-sass)</li>
+            <li class="delayed">Automatic Browser Prefixing (autoprefixer)</li>
+            <li class="delayed">Font Face Tracking (fontface)</li>
+            <li class="delayed">Live Reloading (browserSync)</li>
+
+        </ul>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>What We Want (production)</h2>
+        <ul>
+            <li class="delayed">Smallest Files Possible</li>
+            <ul class="sub delayed">
+                <li class="delayed">Minified CSS (grunt-sass)</li>
+                <li class="delayed">Minified and Concatinated JS (concat/uglify)</li>
+                <li class="delayed">Smallest Site asset images as possible (imagemin)</li>
+            </ul>
+        </ul>
+    </section>
+
+</section>
+
+<section>
+    <header class="slide">
+        <h1>Grunt</h1>
+        <span class="subtitle">All the Plugins</span>
+    </header>
+
+    <section class="slide">
+        <h2>grunt-uncss</h2>
+
+        <p>Remove unused CSS across your project</p>
+    </section>
+
+    <section class="slide">
+        <h2>grunt-responsive-images</h2>
+
+        <p>Create multi-resolution images from a directory</p>
+    </section>
+
+    <section class="slide">
+        <h2>grunt-contrib-jshint</h2>
+
+        <p>Lint JS files</p>
+    </section>
+
+    <section class="slide">
+        <h2>grunt-sftp-deploy</h2>
+
+        <p>Deploy with Grunt!</p>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>load-grunt-tasks</h2>
+
+        <p>Automatically register tasks</p>
+        <img src="img/load.png" alt="">
+        <img src="img/better.png" alt="">
+    </section>
+
+    <section class="slide no-flex">
+        <h2>Roll your own!</h2>
+
+        <p>It's a good intro to node</p>
+    </section>
+
+</section>
+
+
+<footer class="slide no-flex">
+    <h2>Thank you!</h2>
+
+    <p>Questions?</p>
 </footer>
 
 <script src="slideshow.js"></script>
+
+<!-- Uncomment the plugins you need
 <script src="plugins/css-edit.js"></script>
 <script src="plugins/css-snippets.js"></script>
 <script src="plugins/css-controls.js"></script>
+-->
 <script src="plugins/code-highlight.js"></script>
-<script>
-var slideshow = new SlideShow();
 
-var snippets = document.querySelectorAll('.snippet');
-for(var i=0; i<snippets.length; i++) {
-	new CSSSnippet(snippets[i]);
-}
 
-var cssControls = document.querySelectorAll('.css-control');
-for(var i=0; i<cssControls.length; i++) {
-	new CSSControl(cssControls[i]);
-}
-</script>
-	
+<script>var slideshow = new SlideShow();</script>
+
 </body>
 </html>
