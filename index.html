@@ -18,22 +18,27 @@
 </head>
 <body data-duration="45">
 
-<header id="intro" class="slide">
-    <div style="margin: 0 auto" class="svg-wrap">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-	 width="1100px" height="1700px" viewBox="0 0 900 900" enable-background="new 0 0 900 900" xml:space="preserve">
-<path id="s" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M181.313,7.362
+<header id="intro" class="slide" style="background: url(techcamplogo.svg) no-repeat center center; background-size: 50%;">
+    <div class="svg-wrap">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="595.509px" height="363.918px"   x="0px" y="0px" viewBox="0 0 900 900" enable-background="new 0 0 900 900" xml:space="preserve">
+<path id="s" fill="none" stroke="red" stroke-width="6" stroke-miterlimit="10" d="M181.313,7.362
 	c0,0-153.665,59.486-3.965,122.935c149.7,63.448,15.863,128.882-5.949,131.856"/>
-<path id="v" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M212.736,1.06l92.128,244.015
+<path id="v" fill="none" stroke="red" stroke-width="6" stroke-miterlimit="10" d="M212.736,1.06l92.128,244.015
 	c0,0,44.817-234.056,64.738-234.056"/>
-            <path id="g_1" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M470.362,13.352
+            <path id="g_1" fill="none" stroke="red" stroke-width="6" stroke-miterlimit="10" d="M470.362,13.352
 	c0,0-268.703,198.635,10.871,233.333c0,0,111.035,8.923,84.227-84.028"/>
-            <path id="g_2" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M523.5,162.5 565.5,161.5 584.5,220.5 "/>
-
-	<path id="underline" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M1.12,361.135
+            <path id="g_2" fill="none" stroke="red" stroke-width="5" stroke-miterlimit="10" d="M523.5,162.5 565.5,161.5 584.5,220.5 "/>
+	<path id="underline" fill="none" stroke="red" stroke-width="6" stroke-miterlimit="10" d="M1.12,361.135
 		c0,0,325.177-130.865,593.845-81.295"/>
 </svg>
 
+        <style>
+            .svg-wrap svg {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <!-- Javascript for animations -->
         <script>
             $.noConflict();
             (function($) {
@@ -95,248 +100,108 @@
     <p class="attribution">Using Vectors on the web with SVG</p>
 </header>
 
-<header class="slide rf-intro">
+<section class="slide rf-intro">
     <img class="no-dim" src="img/RF_logo_cmyk.svg" alt=""/>
 
     <p>Nathanael Smith</p>
-
     <p class="no-dim">Font End / UI Developer at RocketFuel</p>
-
     <p class="no-dim">Twitter: @nsmith2</p>
-
     <p class="no-dim">GitHub: nsmith7989</p>
-
     <p class="no-dim">nathanael@gorocketfuel.com</p>
 
-
-</header>
+</section>
 
 <section>
     <header class="slide">
-        <h1>Grunt</h1>
+        <h1>SVG</h1>
         <span class="subtitle">Why?</span>
     </header>
+    
+    <section class="slide">
+        <img src="techcamplogo-white.svg" alt=""/>
+    </section>
 
-    <section class="slide no-flex">
-        <h2>Do these things:</h2>
-
-        <p class="delayed dev">Work in modular chunks of CSS and JS</p>
-
-        <p class="delayed prod">But in production everything should be smushed together</p>
-
-        <p class="delayed dev">Use compelling, high quality images</p>
-
-        <p class="delayed prod">But in production everything should be as small as possible</p>
-
-        <p class="delayed dev">Develop quickly and semantically</p>
-
-        <p class="delayed prod">But make it work in ancient browsers</p>
+    <section style="text-align: center" class="slide no-flex">
+        <h1 style="font-size: 180px; text-align: center; padding-top: 180px;">9KB</h1>
+        <p class="delayed">for all resolutions</p>
     </section>
 
     <section class="slide no-flex">
-        <h2>Grunt helps</h2>
+        <img style="width: 100%; margin-top: 100px;" src="img/svg-at-sizes.png" alt=""/>
+    </section>
 
-        <p class="delayed">Bajillion plugins that alleviate the repetative pain of front end development</p>
+    <section class="slide no-flex">
+        <h2>Quick History</h2>
         <ul>
-            <li class="delayed">CSS Preprocessing</li>
-            <li class="delayed">Image Minification</li>
-            <li class="delayed">JS Test Running</li>
-            <li class="delayed">JS concatination</li>
-            <li class="delayed">JS minification</li>
-            <li class="delayed">HandleBars Precompilation</li>
-            <li class="delayed">SFTP Deployment</li>
-            <li class="delayed">JS/CSS Linting</li>
-            <li class="delayed">console.log removal</li>
-            <li class="delayed">SVG to Icon Font Generation</li>
-            <li class="delayed">Browser Syncing / Visual Testing</li>
-        </ul>
-    </section>
-
-    <section class="slide no-flex">
-        <h2>But I already have:</h2>
-        <ul>
-            <li>Codekit</li>
-            <li>LiveReload</li>
-            <li>Compass Watch</li>
-            <li>All the other things...</li>
-        </ul>
-        <p class=delayed>Grunt combines or replaces multiple build tools into extremely powerful workflows</p>
-    </section>
-</section>
-
-<section>
-    <header class="slide">
-        <h1>Grunt</h1>
-        <span class="subtitle">What?</span>
-    </header>
-
-    <section class="slide no-flex">
-        <h2>Grunt is built on Node.js</h2>
-        <img class="delayed no-dim" src="http://nodejs.org/images/logo.svg" alt="Node Logo">
-
-        <p class="delayed no-dim" style="text-align: center">nodejs.org</p>
-
-        <p class="delayed">Javascript Environment that can interact with your local file system</p>
-
-        <p class="delayed">Anything node can do, Grunt can do.</p>
-
-        <p class="delayed" style="text-decoration: underline">Grunt is a system for running node scripts.</p>
-    </section>
-</section>
-
-<section>
-    <header class="slide">
-        <h1>Grunt</h1>
-        <span class="subtitle">Installation.</span>
-    </header>
-
-    <section class="slide no-flex">
-        <h2>Install Steps</h2>
-        <ol>
-            <li>Install Node <a target=_blank href="http://nodejs.org"><span class="hyperlink">nodejs.org</span></a>
-            </li>
-            <li class=delayed>Install Grunt <code>npm install -g grunt-cli</code></li>
-        </ol>
-    </section>
-
-    <section class="slide no-flex">
-        <h2>Usage Steps</h2>
-
-        <p class="delayed">Grunt configuration is per project</p>
-
-        <p class="delayed">Based on two files</p>
-        <ol>
-            <li class="delayed"><code>package.json</code></li>
-            <li class="delayed"><code>Gruntfile.js</code></li>
-        </ol>
-        <p class="delayed">Get these by using a generator e.g. <code>npm install grunt-init -g</code></p>
-
-        <p class="delayed">or by manually creating them...</p>
-    </section>
-
-    <section class="slide no-flex">
-        <h2><code>package.json</code></h2>
-		<pre lang="javascript">
-{
-  "name": "WebWorkers-Gruntification",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-sass": "~0.12.0",
-    "browser-sync": "^0.7.3"
-  }
-}
-		</pre>
-        <p class="delayed"><code>npm install grunt-contrib-watch --save-dev</code></p>
-    </section>
-
-
-    <section class="slide no-flex">
-        <h2><code>Gruntfile.js</code></h2>
-		<pre lang="javascript">
-module.exports = function(grunt) {
-
-  // Project configuration.
-  grunt.initConfig({
-
-  uglify: {
-      //tasks options/config here
-    }
-   
-  });
-  //load tasks here
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  //name tasks here
-  grunt.registerTask('default', ['concat','uglify']);
-
-};
-		</pre>
-    </section>
-
-</section>
-
-<section>
-    <header class="slide">
-        <h1>Grunt</h1>
-        <span class="subtitle">Example Workflow.</span>
-    </header>
-    <section class="slide no-flex">
-        <h2>What We're Doing</h2>
-
-        <p class="delayed">Responsive Wordpress Theme (Zurb Foundation)</p>
-
-        <h3 class="delayed">What We Want (development)</h3>
-        <ul>
-            <li class="delayed">Sass Compilation (grunt-sass)</li>
-            <li class="delayed">Automatic Browser Prefixing (autoprefixer)</li>
-            <li class="delayed">Font Face Tracking (fontface)</li>
-            <li class="delayed">Live Reloading (browserSync)</li>
-
-        </ul>
-    </section>
-
-    <section class="slide no-flex">
-        <h2>What We Want (production)</h2>
-        <ul>
-            <li class="delayed">Smallest Files Possible</li>
-            <ul class="sub delayed">
-                <li class="delayed">Minified CSS (grunt-sass)</li>
-                <li class="delayed">Minified and Concatinated JS (concat/uglify)</li>
-                <li class="delayed">Smallest Site asset images as possible (imagemin)</li>
+            <li class="delayed">Good for situations with low bandwidth</li>
+            <ul>
+                <li class="delayed">Instructions for browser to draw graphic</li>
+                <li class="delayed"><img src="img/svg-code.png" alt=""/></li>
             </ul>
         </ul>
     </section>
-
-</section>
-
-<section>
-    <header class="slide">
-        <h1>Grunt</h1>
-        <span class="subtitle">All the Plugins</span>
-    </header>
-
-    <section class="slide">
-        <h2>grunt-uncss</h2>
-
-        <p>Remove unused CSS across your project</p>
-    </section>
-
-    <section class="slide">
-        <h2>grunt-responsive-images</h2>
-
-        <p>Create multi-resolution images from a directory</p>
-    </section>
-
-    <section class="slide">
-        <h2>grunt-contrib-jshint</h2>
-
-        <p>Lint JS files</p>
-    </section>
-
-    <section class="slide">
-        <h2>grunt-sftp-deploy</h2>
-
-        <p>Deploy with Grunt!</p>
+    <section class="slide no-flex">
+        <h2>But you probably use...</h2>
+        <img src="img/illustrator.png" alt=""/>
     </section>
 
     <section class="slide no-flex">
-        <h2>load-grunt-tasks</h2>
-
-        <p>Automatically register tasks</p>
-        <img src="img/load.png" alt="">
-        <img src="img/better.png" alt="">
+        <img src="img/illustrator-export.png" alt=""/>
     </section>
 
     <section class="slide no-flex">
-        <h2>Roll your own!</h2>
+        <img src="img/illustrator-export2.png" alt=""/>
+    </section>
 
-        <p>It's a good intro to node</p>
+    <section class="slide no-flex">
+        <h2>Simple SVG Usage</h2>
+        <pre lang="html">&lt;img src=&quot;whatever.svg&quot; /&gt;</pre>
+        <p class="delayed">SVGs can be used exactly like .png or .gif</p>
+        <p class="delayed">Can be sized up</p>
+        <pre class="delayed" lang="css">img[src$=".svg"] {
+    width: 100%;
+}</pre>
+        <a class="delayed" href="http://www.w3.org/TR/css3-selectors/#attribute-substrings" target="_blank">CSS Attribute Substrings</a>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>SVG as background Image</h2>
+        <pre lang="css">.awesome {
+    background: url(path-to-svg/awesome.svg);
+}</pre>
+    </section>
+
+    <section class="slide no-flex">
+        <h1>Browser Support and Fallbacks</h1>
+        <img src="img/caniuse-basic.png" />
+    </section>
+
+    <section class="slide no-flex">
+        <h2>SVG as &lt;img&gt; </h2>
+        <pre lang="javascript">
+            document
+            .implementation
+            .hasFeature(
+                "http://www.w3.org/TR/SVG11/feature#Image", "1.1"
+            );</pre>
+        <pre lang="javascript">
+function supportsSVG() {
+        return document.implementation.hasFeature( "http://www.w3.org/TR/SVG11/feature#Image", "1.1" );
+    }
+
+    if( !supportsSVG() ) {
+        $( 'img' ).each( function() {
+            var src = $( this ).attr( 'src' );
+            if( src.indexOf( '.svg' ) !== -1 ) {
+                newSrc = src.replace('.svg', '.png');
+                $(this).attr('src', newSrc);
+            }
+        } );
+    }
+        </pre>
     </section>
 
 </section>
-
 
 <footer class="slide no-flex">
     <h2>Thank you!</h2>

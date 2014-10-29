@@ -142,7 +142,7 @@ var _ = window.Highlight = {
 			return;
 		}
 		
-		var codes = container.querySelectorAll('code[lang]');
+		var codes = container.querySelectorAll('code[lang], pre[lang]');
 	
 		for(var i=0; i<codes.length; i++) {
 			Highlight.init(codes[i]);
