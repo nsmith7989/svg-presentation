@@ -7,7 +7,8 @@ p {
 }
 
 .slide {
-	background: rgba(0,0,0, 1);
+	background:  #002b36;
+    justify-content: center;
 
 	p.dev {
 		color: lighten($grunt-brown, 20%);
@@ -25,29 +26,30 @@ p {
 		text-decoration: underline;
 	}
     h1 {
-        background: #000;
+        background:  #002b36;
     }
     img {
         max-width: 100%;
         max-height: 100%;
     }
+    $base03:    #002b36;
+    $base02:    #073642;
+    $base01:    #586e75;
+    $base00:    #657b83;
+    $base0:     #839496;
+    $base1:     #93a1a1;
+    $base2:     #eee8d5;
+    $base3:     #fdf6e3;
+    $yellow:    #b58900;
+    $orange:    #cb4b16;
+    $red:       #dc322f;
+    $magenta:   #d33682;
+    $violet:    #6c71c4;
+    $blue:      #268bd2;
+    $cyan:      #2aa198;
+    $green:     #859900;
     pre[lang="css"], code[lang="css"] {
-        $base03:    #002b36;
-        $base02:    #073642;
-        $base01:    #586e75;
-        $base00:    #657b83;
-        $base0:     #839496;
-        $base1:     #93a1a1;
-        $base2:     #eee8d5;
-        $base3:     #fdf6e3;
-        $yellow:    #b58900;
-        $orange:    #cb4b16;
-        $red:       #dc322f;
-        $magenta:   #d33682;
-        $violet:    #6c71c4;
-        $blue:      #268bd2;
-        $cyan:      #2aa198;
-        $green:     #859900;
+
         .selector {
             color: $green;
         }
@@ -57,6 +59,17 @@ p {
         color: $cyan;
         .punctuation {
             color: $base2;
+        }
+    }
+    pre[lang="html"], code[lang="html"] {
+        .token {
+            color: $cyan;
+        }
+        .attr-name {
+            color: $base0;
+        }
+        .comment {
+            color: $base0;
         }
     }
 }

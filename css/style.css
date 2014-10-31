@@ -722,50 +722,63 @@ p {
 
 /* line 9, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 .slide {
-  background: black; }
-  /* line 12, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  background: #002b36;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  /* line 13, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide p.dev {
     color: #3676a5;
     line-height: 1;
     margin-bottom: 20px; }
-  /* line 18, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 19, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide p.prod {
     color: #80bd01;
     line-height: 1;
     margin-bottom: 40px; }
-  /* line 23, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 24, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide .hyperlink {
     color: #4d4dff;
     text-decoration: underline; }
-  /* line 27, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 28, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide h1 {
-    background: #000; }
-  /* line 30, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+    background: #002b36; }
+  /* line 31, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide img {
     max-width: 100%;
     max-height: 100%; }
-  /* line 34, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 51, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .slide pre[lang="css"], .slide code[lang="css"] {
     color: #2aa198; }
-    /* line 51, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+    /* line 53, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
     .slide pre[lang="css"] .selector, .slide code[lang="css"] .selector {
       color: #859900; }
-    /* line 54, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+    /* line 56, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
     .slide pre[lang="css"] .property, .slide code[lang="css"] .property {
       color: #b58900; }
-    /* line 58, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+    /* line 60, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
     .slide pre[lang="css"] .punctuation, .slide code[lang="css"] .punctuation {
       color: #eee8d5; }
+  /* line 65, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  .slide pre[lang="html"] .token, .slide code[lang="html"] .token {
+    color: #2aa198; }
+  /* line 68, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  .slide pre[lang="html"] .attr-name, .slide code[lang="html"] .attr-name {
+    color: #839496; }
+  /* line 71, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  .slide pre[lang="html"] .comment, .slide code[lang="html"] .comment {
+    color: #839496; }
 
-/* line 64, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 77, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #timer {
   display: none; }
 
-/* line 68, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 81, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 .delayed.displayed.no-dim {
   opacity: 1; }
 
-/* line 72, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 85, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #intro {
   background: #f5f6f6;
   padding: 0;
@@ -774,19 +787,19 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  /* line 78, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 91, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   #intro img {
     display: block;
     margin: 20px auto; }
 
-/* line 85, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 98, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #intro h1 {
   width: 60%;
   margin: 5% auto 0;
   color: #1D3F58;
   text-shadow: none; }
 
-/* line 92, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 105, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #intro .attribution {
   font-weight: bold;
   text-align: center;
@@ -795,25 +808,25 @@ p {
   color: #fff;
   text-shadow: none; }
 
-/* line 102, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 115, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 .rf-intro {
   background: #0075d6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  /* line 105, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 118, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   .rf-intro img {
     display: block;
     margin: 0 auto 100px; }
 
-/* line 112, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+/* line 125, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
 #css-controls-demo label {
   display: block; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
   /* hack to avoid using the Object element in Safari/WebKit, due to WebKit Bug 27190 */
-  /* line 118, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
+  /* line 131, /Users/nathanaelsmith/projects/techcamp-presentation/sass/_talk.scss */
   object[type="image/svg+xml"] {
     display: none; }
 
