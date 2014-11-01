@@ -72,6 +72,32 @@ p {
             color: $base0;
         }
     }
+    .comparison {
+        th {
+            background: $yellow;
+            border-right: 1px solid $base0;
+            &.no-background {
+                background: none;
+            }
+        }
+
+        td {
+            border: 1px solid $base0;
+            border-collapse: collapse;
+            text-align: center;
+            &.subject {
+                background: $violet;
+                text-align: center;
+                padding: 10px;
+            }
+            &.highlight-good {
+                background: $green;
+            }
+            &.highlight-bad {
+                background: $red;
+            }
+        }
+    }
 }
 
 #timer {

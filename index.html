@@ -31,7 +31,7 @@
 
 <header id="intro" class="slide" style="background: url(techcamplogo.svg) no-repeat center center; background-size: 50%;">
     <div class="svg-wrap" style="height: 100%;">
-        <svg height="100%" width="100%" viewBox="0 0 2px 2px">
+        <svg height="100%" width="100%">
             <path id="s" fill="none" stroke="red" stroke-width="6" stroke-miterlimit="10" d="M181.313,7.362
 	c0,0-153.665,59.486-3.965,122.935c149.7,63.448,15.863,128.882-5.949,131.856"/>
             <path id="v" fill="none" stroke="red" stroke-width="6" stroke-miterlimit="10" d="M212.736,1.06l92.128,244.015
@@ -43,11 +43,6 @@
 		c0,0,325.177-130.865,593.845-81.295"/>
         </svg>
 
-        <style>
-            .svg-wrap svg {
-
-            }
-        </style>
         <!-- Javascript for animations -->
         <script>
             $.noConflict();
@@ -110,7 +105,6 @@
     <p class="attribution">Using Vectors on the web with SVG</p>
 </header>
 
-
 <section class="slide rf-intro">
     <img class="no-dim" src="img/RF_logo_cmyk.svg" alt=""/>
 
@@ -125,7 +119,6 @@
     <p class="no-dim">nathanael@gorocketfuel.com</p>
 
 </section>
-
 
 <section>
     <header class="slide">
@@ -150,20 +143,34 @@
     <section class="slide no-flex">
         <h2>Quick History</h2>
         <ul>
-            <li class="delayed">Good for situations with low bandwidth</li>
-            <ul>
-                <li class="delayed">Instructions for browser to draw graphic</li>
-                <li class="delayed"><img src="img/svg-code.png" alt=""/></li>
-            </ul>
+            <li class="delayed">Standard started in 1999</li>
+            <li class="delayed">Competitor to flash</li>
+            <li class="delayed">Good for situations with low bandwidth
+                <ul>
+                    <li class="delayed">Instructions for browser to draw graphic</li>
+                </ul>
+            </li>
         </ul>
-    </section>
-    <section class="slide no-flex">
-        <h2>But you probably use...</h2>
-        <img src="img/illustrator.png" alt=""/>
     </section>
 
     <section class="slide no-flex">
+        <img src="img/svg-code.png" alt=""/>
+    </section>
+
+    <section class="slide">
+        <h2 style="text-align: center;">Export to Illustrator</h2>
+    </section>
+
+    <div class="slide no-flex">
+        <img src="img/illustrator-artboard.png" alt=""/>
+    </div>
+
+    <section class="slide no-flex">
         <img src="img/illustrator-export.png" alt=""/>
+    </section>
+
+    <section class="slide no-flex">
+        <img src="img/illustrator.png" alt=""/>
     </section>
 
     <section class="slide no-flex">
@@ -171,19 +178,38 @@
     </section>
 
     <section class="slide no-flex">
+        <h2>Optimized it!</h2>
+
+        <p>Adobe isn't great with code generation</p>
+        <ul>
+            <li class="delayed">Leave empty &lt;g&gt;</li>
+            <li class="delayed">Unconnected paths</li>
+            <li class="delayed">General code bloat</li>
+        </ul>
+    </section>
+
+    <section class="slide no-flex">
+        <h2>Opitimziation Tools</h2>
+        <ul>
+            <li class="delayed">svgo <a href="https://github.com/svg/svgo">Node command line tool</a></li>
+            <li class="delayed">SVG Optimizer <a href="http://petercollingridge.appspot.com/svg_optimiser">Online
+                tool</a></li>
+        </ul>
+        <img class="delayed" src="img/svg-optimizer.png" alt=""/>
+    </section>
+
+    <section class="slide no-flex">
+        <img src="img/optimized-svg.png" alt=""/>
+    </section>
+
+    <section class="slide no-flex">
         <h2>Simple SVG Usage</h2>
         <pre lang="html">&lt;img src=&quot;whatever.svg&quot; /&gt;</pre>
         <p class="delayed">SVGs can be used exactly like .png or .gif</p>
-
-
     </section>
 
     <div class="slide no-flex">
         <img src="img/photoshop-size.png" alt=""/>
-    </div>
-
-    <div class="slide no-flex">
-        <img src="img/illustrator-artboard.png" alt=""/>
     </div>
 
     <div class="slide">
@@ -195,7 +221,7 @@
             <use xlink:href="#cross-out"></use>
         </svg>
         <style>
-            .delayed g{
+            .delayed g {
                 fill: purple;
             }
         </style>
@@ -251,6 +277,18 @@ function supportsSVG() {
         } );
     }
         </pre>
+        <a target="_blank" href="http://benhowdle.im/svgeezy/">SVGeezy</a>
+    </section>
+
+    <section class="slide">
+        <pre lang="javascript">if (!supportsSVG()) {
+    $('img[src$=".svg"]' ).each(function() {
+        newSrc = src.replace('.svg', '.png');
+        $(this).attr('src', newSrc);
+    });
+
+}</pre>
+
     </section>
 
 </section>
@@ -303,7 +341,7 @@ c0,0-268.703,198.635,10.871,233.333c0,0,111.035,8.923,84.227-84.028&quot;/&gt;
 </section>
 
 <section class="slide no-flex">
-<h2>Script with Javascript!</h2>
+    <h2>Script with Javascript!</h2>
     <pre lang="html">&lt;svg height=&quot;100%&quot; width=&quot;100%&quot; viewBox=&quot;0 0 2px 2px&quot;&gt;
         &lt;path id=&quot;letter-s&quot; fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;6&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M181.313,7.362
 c0,0-153.665,59.486-3.965,122.935c149.7,63.448,15.863,128.882-5.949,131.856&quot;/&gt;
@@ -323,7 +361,7 @@ $('#letter-s').on('click', function() {
 </section>
 
 <section class="slide">
-    <iframe height="100%" width="100%" src="//parall.ax/parallax/tutorials/svg_map/index.html" frameborder="0"></iframe>
+    <iframe height="100%" width="100%" src="http://raphaeljs.com/australia.html" frameborder="0"></iframe>
 </section>
 
 <section class="slide">
@@ -360,282 +398,480 @@ $('#letter-s').on('click', function() {
     <pre lang="php">&lt;?php include 'path/external_svg_file.svg'; ?&gt;</pre>
 </section>
 
+<section class="slide no-flex">
+    <h2>Disadvantages of &lt;use&gt;</h2>
+    <ul>
+        <li class="delayed">No browser to cache</li>
+        <li class="delayed">No external stylesheet control</li>
+        <li class="delayed">Adds to page bloat</li>
+    </ul>
+</section>
+
 <section class="slide">
     <h2>In the future...??</h2>
     <pre>&lt;svg class=&quot;super-awesome-svg-thing&quot;&gt;
     &lt;use xlink:href=&quot;<span style="color: green">defs.svg</span>#shape-thing-1&quot;&gt;&lt;/use&gt;
 &lt;/svg&gt;</pre>
     <p class="delayed">Not yet supported in <em>any</em> version of IE</p>
+
+    <p class="delayed">But there is a
+        <a target="_blank" href="https://github.com/jonathantneal/svg4everybody">pollyfill</a></p>
 </section>
 
 <section class="slide no-flex">
-    <h2>Styling SVGs with &lt;use&gt;</h2>
+    <h2>Styling SVGs Internal Stylesheet</h2>
+   <pre lang="html">&lt;svg height=&quot;100%&quot; width=&quot;100%&quot; viewBox=&quot;0 0 2px 2px&quot;&gt;
+        &lt;style&gt;
+            #letter-s:hover {
+                fill: #000;
+            }
+        &lt;/style&gt;
+        &lt;path id=&quot;letter-s&quot; fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;6&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M181.313,7.362
+c0,0-153.665,59.486-3.965,122.935c149.7,63.448,15.863,128.882-5.949,131.856&quot;/&gt;
+        &lt;path id=&quot;letter-v&quot; fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;6&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M212.736,1.06l92.128,244.015
+c0,0,44.817-234.056,64.738-234.056&quot;/&gt;
+        &lt;path id=&quot;letter-g_1&quot; fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;6&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M470.362,13.352
+c0,0-268.703,198.635,10.871,233.333c0,0,111.035,8.923,84.227-84.028&quot;/&gt;
+        &lt;path id=&quot;letter-g_2&quot; fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;5&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M523.5,162.5 565.5,161.5 584.5,220.5 &quot;/&gt;
+        &lt;path id=&quot;underline&quot; fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;6&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M1.12,361.135
+    c0,0,325.177-130.865,593.845-81.295&quot;/&gt;
+&lt;/svg&gt;</pre>
 </section>
 
+<section class="slide">
+    <h2 style="text-align: center">Embeding SVG with &lt;object&gt;</h2>
+</section>
+
+<section class="slide">
+    <pre lang="html">&lt;object type=&quot;image/svg+xml&quot; data=&quot;techcamplogo.svg&quot; class=&quot;logo&quot;&gt;
+  This will only render if the browser does not support SVG
+&lt;/object&gt;</pre>
+</section>
+
+<section class="slide no-flex">
+    <h2>Advantages of &lt;object&gt;</h2>
+    <ul>
+        <li class="delayed">Caching</li>
+        <li class="delayed">Scripting Control</li>
+        <li class="delayed">Embedded Stylesheet Control</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 style="text-align: center">&lt;svg&gt; vs Icon Font</h2>
+</section>
+
+<section class="slide no-flex">
+    <h2>Icon Fonts</h2>
+    <pre lang="css">@font-face {
+    font-family:"icons";
+    src:url("icon-font.eot");
+    src:url("icon-font.eot?#iefix") format("embedded-opentype"),
+        url("icon-font.woff") format("woff"),
+        url("icon-font.ttf") format("truetype"),
+        url("icon-font.svg?#icons") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+.icon {
+    font-family: icons;
+    display: inline-block;
+}
+.icon_facebook:before {
+	content:"\f102";
+}
+.icon_instagram:before {
+	content:"\f103";
+}
+</pre>
+    <pre lang="html">&lt;a href="http://facebook.com" class="icon icon_facebook"&gt;Facebook&lt;/a&gt;</pre>
+</section>
+
+<section class="slide">
+    <pre lang="css">.icon_facebook {
+    text-indent: -9999px;
+    /* for screen readers */
+}
+.icon_facebook:hover {
+    color: #3b5998;
+}</pre>
+</section>
+
+<section class="slide no-flex">
+    <h2>Comparison</h2>
+    <table class="comparison" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <th class="no-background">&nbsp;</th>
+            <th>Icon Font</th>
+            <th>SVG</th>
+        </tr>
+        <tr>
+            <td class="subject">Vector</td>
+            <td class="highlight-bad">Yes, (anti-aliasing, single color)</td>
+            <td class="highlight-good">Fully</td>
+        </tr>
+        <tr>
+            <td class="subject">CSS Control</td>
+            <td class="highlight-bad">Some</td>
+            <td class="highlight-good">Better</td>
+        </tr>
+        <tr>
+            <td class="subject">Positioning</td>
+            <td class="highlight-bad">Good Luck</td>
+            <td class="highlight-good">Possible</td>
+        </tr>
+        <tr>
+            <td class="subject">Failures</td>
+            <td class="highlight-bad">Yes</td>
+            <td class="highlight-good">No (if SVG Supported)</td>
+        </tr>
+        <tr>
+            <td class="subject">Semantics</td>
+            <td class="highlight-bad">None</td>
+            <td class="highlight-good">Better &lt;symbol&gt;</td>
+        </tr>
+        <tr>
+            <td class="subject">Accessibility</td>
+            <td class="highlight-bad">Possible</td>
+            <td class="highlight-good">Better, can add more info</td>
+        </tr>
+        <tr>
+            <td class="subject">Browser Support</td>
+            <td class="highlight-good">IE 6 +</td>
+            <td class="highlight-bad">IE 9 +</td>
+        </tr>
+
+    </table>
+</section>
+
+<section class="slide">
+    <h2 style="text-align: center">Possible &lt;svg&gt; Effects</h2>
+</section>
+
+<section class="slide">
+    <h2>Line Animation</h2>
+    <ul>
+        <li class="delayed">A &lt;path&gt; can have a stroke</li>
+        <li class="delayed">That stroke can be dashed (and animated)
+            <img src="http://cdn.css-tricks.com/wp-content/uploads/2014/02/animate-stroke.gif" alt=""/>
+
+        </li>
+        <li class="delayed">The dash can be any length (including the length of the entire path)</li>
+    </ul>
+    <p class="delayed"><a href="http://css-tricks.com/svg-line-animation-works/">CSS Tricks Article</a></p>
+</section>
+
+<section class="slide ">
+    <div>
+        <p>Use javascript to determine the length of the path</p>
+        <p>Then use CSS to animate</p>
+    </div>
+</section>
+
+<section class="slide no-flex">
+    <h2>Examples of Third party tools</h2>
+    <ul>
+        <li class="delayed">
+            <a href="http://raphaeljs.com/">Raphaël.js</a>
+            <a href="http://raphaeljs.com/pie.html">Interactive Pie Chart</a>
+            <a href="http://tympanus.net/Development/AnimatedSVGIcons/">Animated Icons</a>
+        </li>
+        <li class="delayed">
+            <a href="http://snapsvg.io/">Snap.svg</a> <a href="http://snapsvg.io/demos/#globe">Travel Globe</a>
+        </li>
+        <li class="delayed">
+            <a href="http://tympanus.net/codrops">Codedrops</a>
+            <a href="http://tympanus.net/Development/SVGDrawingAnimation/">SVG Drawing</a>
+        </li>
+        <li class="delayed">
+            <a href="http://d3js.org/">D3 js</a> <a href="http://www.theguardian.com/world/interactive/2013/apr/30/violence-guns-best-selling-video-games">Violence and guns in best-selling video games</a>
+        </li>
+        <li class="delayed">
+            <a href="http://lazylinepainter.info/">Lazy Line Converter</a>
+        </li>
+    </ul>
+</section>
 
 <section class="slide animated-logo">
 <div id="techcamplogo" style="margin: auto;">
 </div>
-
 <script>
-    (function($) {
-        /*
-         * Lazy Line Painter - Path Object
-         * Generated using 'SVG to Lazy Line Converter'
-         *
-         * http://lazylinepainter.info
-         * Copyright 2013, Cam O'Connell
-         *
-         */
-        /*
-         * Lazy Line Painter 1.4.1
-         * SVG Stroke animation.
-         *
-         * https://github.com/camoconnell/lazy-line-painter
-         * http://www.camoconnell.com
-         *
-         * Copyright 2013 Cam O'Connell
-         * Licensed under the MIT license.
-         *
-         */
-        (function(e, r, p) {
-            var l = {
-                init: function(c) {
-                    return this.each( function() {
-                        var a = e( this ), b = a.data( "lazyLinePainter" );
-                        a.addClass( "lazy-line" );
-                        if( !b ) {
-                            var b = e.extend( {
-                                width: null,
-                                height: null,
-                                strokeWidth: 2,
-                                strokeColor: "#000",
-                                strokeCap: "round",
-                                strokeJoin: "round",
-                                strokeOpacity: 1,
-                                strokeDash: null,
-                                onComplete: null,
-                                delay: null,
-                                overrideKey: null
-                            }, c ), h = null === b.overrideKey ? a.attr( "id" ).replace( "#", "" ) : b.overrideKey, f = b.svgData[h].dimensions.width, k = b.svgData[h].dimensions.height;
-                            b.svgData = b.svgData[h].strokepath;
-                            null ===
-                            b.width && (b.width = f);
-                            null === b.height && (b.height = k);
-                            h = a.attr( "id" );
-                            f = new Raphael( h, f, k );
-                            a.data( "lazyLinePainter", {
-                                svgData: b.svgData,
-                                width: b.width,
-                                height: b.height,
-                                strokeWidth: b.strokeWidth,
-                                strokeColor: b.strokeColor,
-                                strokeCap: b.strokeCap,
-                                strokeJoin: b.strokeJoin,
-                                strokeOpacity: b.strokeOpacity,
-                                strokeDash: b.strokeDash,
-                                onComplete: b.onComplete,
-                                delay: b.delay,
-                                overrideKey: b.overrideKey,
-                                paper: f,
-                                count: 1,
-                                complete: !1,
-                                playhead: 0,
-                                setTimeOutHandler: []
-                            } )
-                        }
-                    } )
-                }, paint: function() {
-                    return this.each( function() {
-                        var c = e( this ),
-                                a = c.data( "lazyLinePainter" ), b = function() {
-                                    c.css( {width: a.width, height: a.height} );
-                                    e.each( a.svgData, function(b, f) {
-                                        var e = a.paper.path( f.path );
-                                        e.attr( {stroke: "none", "stroke-width": a.strokeWidth, "fill-opacity": 0} );
-                                        var g = setTimeout( function() {
-                                            n( {
-                                                count: a.count,
-                                                canvas: a.paper,
-                                                pathstr: e,
-                                                duration: f.duration,
-                                                attr: m( a, f ),
-                                                callback: function(b) {
-                                                    a.setTimeOutHandler.splice( a.count, 1 );
-                                                    a.count++;
-                                                    a.svgData.length + 1 == a.count && (a.complete = !0, null !== a.onComplete && a.onComplete.call( c ))
-                                                }
-                                            } )
-                                        }, a.playhead );
-                                        a.playhead += f.duration;
-                                        a.setTimeOutHandler.push( g )
-                                    } )
-                                };
-                        null === a.delay ? b() : setTimeout( b, a.delay )
-                    } )
-                }, erase: function() {
-                    return this.each( function() {
-                        var c = e( this );
-                        c.find( "svg" ).empty();
-                        d = c.data( "lazyLinePainter" );
-                        for(i = 0; i < d.setTimeOutHandler.length; i++)clearTimeout( d.setTimeOutHandler[i] );
-                        d.playhead = 0;
-                        d.count = 0;
-                        d.complete = !1
-                    } )
-                }, destroy: function() {
-                    return this.each( function() {
-                        var c = e( this );
-                        c.data( "lazyLinePainter" );
-                        c.removeData( "lazyLinePainter" );
-                        c.remove()
-                    } )
-                }, stamp: function() {
-                    return this.each( function() {
-                        var c = e( this ), a = c.data( "lazyLinePainter" ),
-                                b = function() {
-                                    c.css( {width: a.width, height: a.height} );
-                                    for(i = 0; i < a.svgData.length; i++)a.paper.path( a.svgData[i].path ).attr( m( a, a.svgData[i] ) )
-                                };
-                        null === a.delay ? b() : setTimeout( b, a.delay )
-                    } )
-                }
-            }, m = function(c, a) {
-                return {
-                    stroke: a.strokeColor ? a.strokeColor : c.strokeColor,
-                    "fill-opacity": 0,
-                    "stroke-dasharray": a.strokeDash ? a.strokeDash : c.strokeDash,
-                    "stroke-opacity": a.strokeOpacity ? a.strokeOpacity : c.strokeOpacity,
-                    "stroke-width": a.strokeWidth ? a.strokeWidth : c.strokeWidth,
-                    "stroke-linecap": a.strokeCap ? a.strokeCap : c.strokeCap,
-                    "stroke-linejoin": a.strokeJoin ? a.strokeJoin : c.strokeJoin
-                }
-            }, n = function(c) {
-                var a = c.canvas, b = c.pathstr, e = c.duration, f = c.attr, k = c.callback, g;
-                g = "string" == typeof b ? a.path( b ).attr( {stroke: "none", fill: "none"} ) : b;
-                var l = a.path( g.getSubpath( 0, 1 ) ).attr( f ), m = g.getTotalLength( g );
-                g.getPointAtLength( 0 );
-                var n = (new Date).getTime(), q = setInterval( function() {
-                    var a = (new Date).getTime() - n, b = g.getSubpath( 0, a / e * m );
-                    f.path = b;
-                    l.animate( f, 25 );
-                    a >= e && (clearInterval( q ), k !== p && k(), g.remove())
-                }, 25 )
-            };
-            e.fn.lazylinepainter = function(c) {
-                if( l[c] )return l[c].apply( this,
-                        Array.prototype.slice.call( arguments, 1 ) );
-                if( "object" === typeof c || !c )return l.init.apply( this, arguments )
-            }
-        })( jQuery, window );
-
-        var pathObj = {
-            "techcamplogo": {
-                "strokepath": [
-                    {
-                        "path": "M38.398,14.35v66.623H23.169V14.35H0V0.706h62.392V14.35H38.398z",
-                        "duration": 600
-                    },
-                    {
-                        "path": "M81.063,13.525v20.697h37.633v11.233H81.063v22.698h40.045v12.818H65.833V0.706h54.923v12.819H81.063z",
-                        "duration": 600
-                    },
-                    {
-                        "path": "M176.008,52.335h15.288V55.1c0,11.172-2.038,18.395-6.116,21.668c-4.077,3.275-13.091,4.91-27.048,4.91       c-15.84,0-25.579-2.587-29.227-7.763c-3.645-5.172-5.468-19.011-5.468-41.514c0-13.25,2.472-21.965,7.41-26.139       C135.788,2.088,146.114,0,161.836,0c11.446,0,19.091,1.716,22.935,5.146c3.84,3.431,5.762,10.241,5.762,20.435l0.058,1.822       h-15.289v-2.058c0-5.252-0.99-8.615-2.969-10.086c-1.979-1.47-6.497-2.205-13.553-2.205c-9.447,0-15.123,1.157-17.025,3.471       c-1.901,2.313-2.852,9.173-2.852,20.58c0,15.369,0.852,24.463,2.559,27.284c1.705,2.823,7.222,4.236,16.553,4.236       c7.564,0,12.475-0.784,14.729-2.354c2.256-1.568,3.382-5.019,3.382-10.35L176.008,52.335z",
-                        "duration": 1400
-                    },
-                    {
-                        "path": "M262.956,0.706v80.267h-15.23V46.278h-37.634v34.694h-15.229V0.706h15.229v32.753h37.634V0.706H262.956z",
-                        "duration": 600
-                    },
-                    {
-                        "path": "M47.524,129.58h9.489l0.066,3.524c0,13.874-9.082,20.808-27.246,20.808c-11.658,0-19.36-2.19-23.111-6.573        c-3.752-4.382-5.627-13.421-5.627-27.111c0-12.833,1.91-21.542,5.729-26.13c3.82-4.585,11.083-6.878,21.79-6.878        c10.529,0,17.712,1.548,21.555,4.644c3.84,3.094,5.762,8.912,5.762,17.451h-9.49v-1.693c0-5.016-1.242-8.359-3.728-10.031        s-7.434-2.509-14.844-2.509c-7.141,0-11.726,1.581-13.758,4.744c-2.035,3.164-3.051,10.259-3.051,21.283        c0,10.754,1.162,17.601,3.491,20.536c2.328,2.938,7.763,4.406,16.301,4.406c7.231,0,11.814-0.959,13.76-2.881        C46.552,141.248,47.524,136.719,47.524,129.58z",
-                        "duration": 1300
-                    },
-                    {
-                        "path": "M73.254,106.332H63.83c0-7.547,1.708-12.618,5.119-15.217c3.414-2.597,10.09-3.896,20.027-3.896        c10.803,0,18.1,1.592,21.895,4.778c3.796,3.186,5.693,9.251,5.693,18.197v42.771h-9.488l0.745-6.982l-0.204-0.07        c-3.614,5.334-10.958,7.999-22.027,7.999c-16.359,0-24.536-6.573-24.536-19.723c0-7.816,1.831-13.218,5.489-16.199        c3.659-2.981,10.278-4.475,19.858-4.475c11.389,0,18.21,2.238,20.471,6.712l0.204-0.067v-7.862        c0-7.411-1.02-12.212-3.049-14.403c-2.038-2.191-6.484-3.288-13.354-3.288c-11.658,0-17.488,3.276-17.488,9.827        C73.186,104.749,73.208,105.384,73.254,106.332z M88.503,120.904c-7.277,0-12.007,0.77-14.199,2.306        c-2.192,1.534-3.287,4.832-3.287,9.895c0,5.242,1.085,8.709,3.253,10.405c2.171,1.693,6.576,2.541,13.218,2.541        c13.376,0,20.063-4.068,20.063-12.2c0-5.105-1.301-8.541-3.898-10.303C101.052,121.785,96.003,120.904,88.503,120.904z",
-                        "duration": 1800
-                    },
-                    {
-                        "path": "M121.975,88.168h9.491l-0.204,9.761l0.204,0.203c3.66-7.274,10.709-10.912,21.146-10.912        c10.98,0,17.646,3.638,19.995,10.912h0.269c4.069-7.274,11.501-10.912,22.302-10.912c15.271,0,22.909,7.794,22.909,23.382        v42.364h-9.491v-43.245c0-5.693-1.016-9.556-3.05-11.589c-2.03-2.034-5.876-3.051-11.521-3.051        c-7.502,0-12.584,1.413-15.254,4.235c-2.662,2.825-3.997,8.214-3.997,16.166v37.483h-9.489v-42.364l-0.137-2.98        c0-8.359-4.764-12.54-14.298-12.54c-12.924,0-19.385,7.026-19.385,21.079v36.806h-9.491V88.168z",
-                        "duration": 1000
-                    },
-                    {
-                        "path": "M224.449,88.168h9.486l-0.475,8.201l0.273,0.201c3.301-6.234,10.394-9.351,21.282-9.351        c9.625,0,16.244,2.439,19.861,7.319c3.613,4.881,5.42,13.872,5.42,26.976c0,12.156-1.83,20.594-5.49,25.315        c-3.66,4.721-10.166,7.082-19.52,7.082c-10.663,0-17.714-2.868-21.146-8.607h-0.206v35.447h-9.486V88.168z M252.375,95.081        c-7.594,0-12.542,1.638-14.844,4.913c-2.306,3.277-3.459,10.314-3.459,21.114c0,9.985,1.242,16.64,3.729,19.96        c2.483,3.322,7.476,4.982,14.98,4.982c7.139,0,11.85-1.604,14.131-4.813c2.281-3.208,3.424-9.828,3.424-19.858        c0-11.023-1.111-18.163-3.32-21.418C264.799,96.708,259.92,95.081,252.375,95.081z",
-                        "duration": 1300
-                    },
-                    {
-                        "path": "M74.41,159.974v20.778h-2.344v-16.624v-1.248l0.016-0.624l0.013-0.623h-0.062l-0.183,0.485       c-0.089,0.244-0.15,0.401-0.184,0.474l-0.392,0.974l-7.079,17.187h-2.345l-7.094-16.988l-0.412-0.959l-0.184-0.487       c-0.05-0.111-0.109-0.269-0.183-0.472h-0.062l0.015,0.562l0.017,0.579v1.141v16.624h-2.344v-20.778h4.065l5.539,13.442       l0.886,2.176l0.44,1.081l0.427,1.081h0.061l0.428-1.081c0.208-0.519,0.354-0.877,0.425-1.081l0.896-2.163l5.512-13.455H74.41z",
-                        "duration": 1000
-                    },
-                    {
-                        "path": "M86.096,161.952v7.079h10.547v1.979H86.096v7.764h11.008v1.978H83.752v-20.778h13.352v1.979H86.096z",
-                        "duration": 600
-                    },
-                    {
-                        "path": "M129.159,159.974v20.778h-2.346v-16.624v-1.248l0.017-0.624l0.013-0.623h-0.061l-0.184,0.485       c-0.089,0.244-0.149,0.401-0.183,0.474l-0.392,0.974l-7.08,17.187h-2.344l-7.097-16.988l-0.41-0.959l-0.183-0.487       c-0.05-0.111-0.111-0.269-0.184-0.472h-0.061l0.015,0.562l0.017,0.579v1.141v16.624h-2.347v-20.778h4.065l5.542,13.442       l0.883,2.176l0.443,1.081l0.426,1.081h0.062l0.425-1.081c0.211-0.519,0.356-0.877,0.427-1.081l0.895-2.163l5.515-13.455       H129.159z",
-                        "duration": 1000
-                    },
-                    {
-                        "path": "M139.335,180.752v-20.778h8.724h0.794c2.344,0,3.942,0.451,4.794,1.354c0.853,0.903,1.277,2.593,1.277,5.068       c0,2.375-0.444,3.993-1.333,4.858c-0.887,0.861-2.554,1.294-4.998,1.294l-0.913,0.014h-6.001v8.189H139.335z M141.679,170.585       h5.559c2.323,0,3.812-0.241,4.468-0.717c0.652-0.478,0.98-1.573,0.98-3.287c0-2.011-0.22-3.281-0.66-3.815       c-0.442-0.531-1.488-0.798-3.145-0.798l-0.896-0.016h-6.306V170.585z",
-                        "duration": 800
-                    },
-                    {
-                        "path": "M180.798,159.974v20.778h-2.344v-9.635h-12.146v9.635h-2.347v-20.778h2.347v9.164h12.146v-9.164H180.798z",
-                        "duration": 600
-                    },
-                    {
-                        "path": "M193.322,159.974v20.778h-2.344v-20.778H193.322z",
-                        "duration": 600
-                    },
-                    {
-                        "path": "M217.81,165.605h-2.327c0-1.674-0.28-2.736-0.838-3.188c-0.558-0.452-1.872-0.68-3.94-0.68       c-2.458,0-4.04,0.217-4.753,0.648c-0.71,0.431-1.066,1.392-1.066,2.885c0,1.674,0.278,2.694,0.84,3.059       c0.557,0.366,2.217,0.614,4.979,0.746c3.236,0.142,5.294,0.553,6.168,1.233c0.881,0.681,1.32,2.202,1.32,4.567       c0,2.556-0.506,4.213-1.516,4.963c-1.011,0.751-3.238,1.126-6.691,1.126c-2.992,0-4.984-0.376-5.973-1.133       c-0.991-0.756-1.486-2.281-1.486-4.574l-0.013-0.93h2.326v0.516c0,1.858,0.286,3.016,0.853,3.466       c0.569,0.453,2.024,0.676,4.37,0.676c2.692,0,4.344-0.223,4.964-0.676c0.619-0.45,0.928-1.659,0.928-3.616       c0-1.269-0.208-2.112-0.635-2.534c-0.416-0.42-1.297-0.672-2.637-0.755l-2.437-0.121l-2.315-0.122       c-3.524-0.244-5.282-2.07-5.282-5.481c0-2.363,0.513-3.942,1.538-4.734c1.025-0.791,3.068-1.187,6.135-1.187       c3.106,0,5.133,0.369,6.075,1.104C217.34,161.6,217.81,163.181,217.81,165.605z",
-                        "duration": 1800
-                    },
-                    {
-                        "path": "M300.129,91.768c-0.105-0.818-0.174-1.607-0.314-2.381c-0.912-5.045-3.242-9.405-6.498-13.294       c-2.049-2.448-4.404-4.575-7.072-6.345c-3.408-2.262-7.086-3.852-11.164-4.424c-0.805-0.113-1.621-0.146-2.432-0.217       c-0.346,2.091-0.676,4.098-1.025,6.219c0.133-0.042,0.201-0.078,0.273-0.083c2.738-0.198,5.342,0.37,7.832,1.455       c4.863,2.117,8.619,5.513,11.385,10.015c1.793,2.918,2.883,6.07,2.949,9.534c0.002,0.081,0.033,0.161,0.055,0.261       C296.12,92.262,298.096,92.019,300.129,91.768z M269.85,82.026c5.58,0.708,11.236,5.415,12.41,11.931       c1.721-0.212,3.441-0.423,5.162-0.636c-1.033-8.509-8.441-15.616-16.721-16.424C270.418,78.598,270.137,80.3,269.85,82.026z",
-                        "duration": 1400
-                    },
-                    {
-                        "path": "M311.989,90.371c-0.975,0.103-1.947,0.198-2.918,0.309       c-0.992,0.111-1.98,0.238-3.012,0.364c-0.018-0.513-0.023-1.002-0.055-1.49c-0.311-4.729-1.955-9.01-4.367-13.026       c-2.053-3.416-4.604-6.424-7.578-9.061c-3.877-3.436-8.217-6.088-13.213-7.582c-2.129-0.637-4.305-1.016-6.537-1.018       c-0.188-0.001-0.377,0.057-0.633,0.1c0.094-0.589,0.168-1.03,0.236-1.475c0.232-1.46,0.459-2.92,0.688-4.381       c0.021-0.021,0.043-0.042,0.064-0.063c2.893,0.179,5.727,0.685,8.49,1.556c5.27,1.662,9.986,4.325,14.197,7.89       c0.398,0.337,0.811,0.659,1.215,0.989c1.018,1.016,2.031,2.031,3.049,3.048c0.08,0.12,0.146,0.253,0.244,0.359       c1.771,1.958,3.332,4.073,4.693,6.337c3.018,5.012,4.934,10.396,5.441,16.255c0.023,0.258,0.078,0.511,0.119,0.766       C312.071,90.289,312.03,90.33,311.989,90.371z",
-                        "duration": 1400
-                    },
-                    {
-                        "path": "M300.129,91.768c-2.033,0.251-4.01,0.494-6.012,0.74       c-0.021-0.1-0.053-0.18-0.055-0.261c-0.066-3.464-1.156-6.616-2.949-9.534c-2.766-4.502-6.521-7.897-11.385-10.015       c-2.49-1.085-5.094-1.653-7.832-1.455c-0.072,0.005-0.141,0.041-0.273,0.083c0.35-2.121,0.68-4.128,1.025-6.219       c0.811,0.071,1.627,0.104,2.432,0.217c4.078,0.572,7.756,2.162,11.164,4.424c2.668,1.77,5.023,3.896,7.072,6.345       c3.256,3.889,5.586,8.249,6.498,13.294C299.956,90.16,300.024,90.949,300.129,91.768z",
-                        "duration": 1000
-                    },
-                    {
-                        "path": "M269.85,82.026c0.287-1.727,0.568-3.429,0.852-5.129       c8.279,0.808,15.688,7.915,16.721,16.424c-1.721,0.213-3.441,0.424-5.162,0.636C281.086,87.441,275.43,82.734,269.85,82.026z",
-                        "duration": 600
+(function($) {
+    /*
+     * Lazy Line Painter - Path Object
+     * Generated using 'SVG to Lazy Line Converter'
+     *
+     * http://lazylinepainter.info
+     * Copyright 2013, Cam O'Connell
+     *
+     */
+    /*
+     * Lazy Line Painter 1.4.1
+     * SVG Stroke animation.
+     *
+     * https://github.com/camoconnell/lazy-line-painter
+     * http://www.camoconnell.com
+     *
+     * Copyright 2013 Cam O'Connell
+     * Licensed under the MIT license.
+     *
+     */
+    (function(e, r, p) {
+        var l = {
+            init: function(c) {
+                return this.each( function() {
+                    var a = e( this ), b = a.data( "lazyLinePainter" );
+                    a.addClass( "lazy-line" );
+                    if( !b ) {
+                        var b = e.extend( {
+                            width: null,
+                            height: null,
+                            strokeWidth: 2,
+                            strokeColor: "#000",
+                            strokeCap: "round",
+                            strokeJoin: "round",
+                            strokeOpacity: 1,
+                            strokeDash: null,
+                            onComplete: null,
+                            delay: null,
+                            overrideKey: null
+                        }, c ), h = null === b.overrideKey ? a.attr( "id" ).replace( "#", "" ) : b.overrideKey, f = b.svgData[h].dimensions.width, k = b.svgData[h].dimensions.height;
+                        b.svgData = b.svgData[h].strokepath;
+                        null ===
+                        b.width && (b.width = f);
+                        null === b.height && (b.height = k);
+                        h = a.attr( "id" );
+                        f = new Raphael( h, f, k );
+                        a.data( "lazyLinePainter", {
+                            svgData: b.svgData,
+                            width: b.width,
+                            height: b.height,
+                            strokeWidth: b.strokeWidth,
+                            strokeColor: b.strokeColor,
+                            strokeCap: b.strokeCap,
+                            strokeJoin: b.strokeJoin,
+                            strokeOpacity: b.strokeOpacity,
+                            strokeDash: b.strokeDash,
+                            onComplete: b.onComplete,
+                            delay: b.delay,
+                            overrideKey: b.overrideKey,
+                            paper: f,
+                            count: 1,
+                            complete: !1,
+                            playhead: 0,
+                            setTimeOutHandler: []
+                        } )
                     }
-                ],
-                "dimensions": {
-                    "width": 400,
-                    "height": 400
-                }
+                } )
+            }, paint: function() {
+                return this.each( function() {
+                    var c = e( this ),
+                            a = c.data( "lazyLinePainter" ), b = function() {
+                                c.css( {width: a.width, height: a.height} );
+                                e.each( a.svgData, function(b, f) {
+                                    var e = a.paper.path( f.path );
+                                    e.attr( {stroke: "none", "stroke-width": a.strokeWidth, "fill-opacity": 0} );
+                                    var g = setTimeout( function() {
+                                        n( {
+                                            count: a.count,
+                                            canvas: a.paper,
+                                            pathstr: e,
+                                            duration: f.duration,
+                                            attr: m( a, f ),
+                                            callback: function(b) {
+                                                a.setTimeOutHandler.splice( a.count, 1 );
+                                                a.count++;
+                                                a.svgData.length + 1 == a.count && (a.complete = !0, null !== a.onComplete && a.onComplete.call( c ))
+                                            }
+                                        } )
+                                    }, a.playhead );
+                                    a.playhead += f.duration;
+                                    a.setTimeOutHandler.push( g )
+                                } )
+                            };
+                    null === a.delay ? b() : setTimeout( b, a.delay )
+                } )
+            }, erase: function() {
+                return this.each( function() {
+                    var c = e( this );
+                    c.find( "svg" ).empty();
+                    d = c.data( "lazyLinePainter" );
+                    for(i = 0; i < d.setTimeOutHandler.length; i++)clearTimeout( d.setTimeOutHandler[i] );
+                    d.playhead = 0;
+                    d.count = 0;
+                    d.complete = !1
+                } )
+            }, destroy: function() {
+                return this.each( function() {
+                    var c = e( this );
+                    c.data( "lazyLinePainter" );
+                    c.removeData( "lazyLinePainter" );
+                    c.remove()
+                } )
+            }, stamp: function() {
+                return this.each( function() {
+                    var c = e( this ), a = c.data( "lazyLinePainter" ),
+                            b = function() {
+                                c.css( {width: a.width, height: a.height} );
+                                for(i = 0; i < a.svgData.length; i++)a.paper.path( a.svgData[i].path ).attr( m( a, a.svgData[i] ) )
+                            };
+                    null === a.delay ? b() : setTimeout( b, a.delay )
+                } )
             }
+        }, m = function(c, a) {
+            return {
+                stroke: a.strokeColor ? a.strokeColor : c.strokeColor,
+                "fill-opacity": 0,
+                "stroke-dasharray": a.strokeDash ? a.strokeDash : c.strokeDash,
+                "stroke-opacity": a.strokeOpacity ? a.strokeOpacity : c.strokeOpacity,
+                "stroke-width": a.strokeWidth ? a.strokeWidth : c.strokeWidth,
+                "stroke-linecap": a.strokeCap ? a.strokeCap : c.strokeCap,
+                "stroke-linejoin": a.strokeJoin ? a.strokeJoin : c.strokeJoin
+            }
+        }, n = function(c) {
+            var a = c.canvas, b = c.pathstr, e = c.duration, f = c.attr, k = c.callback, g;
+            g = "string" == typeof b ? a.path( b ).attr( {stroke: "none", fill: "none"} ) : b;
+            var l = a.path( g.getSubpath( 0, 1 ) ).attr( f ), m = g.getTotalLength( g );
+            g.getPointAtLength( 0 );
+            var n = (new Date).getTime(), q = setInterval( function() {
+                var a = (new Date).getTime() - n, b = g.getSubpath( 0, a / e * m );
+                f.path = b;
+                l.animate( f, 25 );
+                a >= e && (clearInterval( q ), k !== p && k(), g.remove())
+            }, 25 )
         };
+        e.fn.lazylinepainter = function(c) {
+            if( l[c] )return l[c].apply( this,
+                    Array.prototype.slice.call( arguments, 1 ) );
+            if( "object" === typeof c || !c )return l.init.apply( this, arguments )
+        }
+    })( jQuery, window );
+
+    var pathObj = {
+        "techcamplogo": {
+            "strokepath": [
+                {
+                    "path": "M38.398,14.35v66.623H23.169V14.35H0V0.706h62.392V14.35H38.398z",
+                    "duration": 600
+                },
+                {
+                    "path": "M81.063,13.525v20.697h37.633v11.233H81.063v22.698h40.045v12.818H65.833V0.706h54.923v12.819H81.063z",
+                    "duration": 600
+                },
+                {
+                    "path": "M176.008,52.335h15.288V55.1c0,11.172-2.038,18.395-6.116,21.668c-4.077,3.275-13.091,4.91-27.048,4.91       c-15.84,0-25.579-2.587-29.227-7.763c-3.645-5.172-5.468-19.011-5.468-41.514c0-13.25,2.472-21.965,7.41-26.139       C135.788,2.088,146.114,0,161.836,0c11.446,0,19.091,1.716,22.935,5.146c3.84,3.431,5.762,10.241,5.762,20.435l0.058,1.822       h-15.289v-2.058c0-5.252-0.99-8.615-2.969-10.086c-1.979-1.47-6.497-2.205-13.553-2.205c-9.447,0-15.123,1.157-17.025,3.471       c-1.901,2.313-2.852,9.173-2.852,20.58c0,15.369,0.852,24.463,2.559,27.284c1.705,2.823,7.222,4.236,16.553,4.236       c7.564,0,12.475-0.784,14.729-2.354c2.256-1.568,3.382-5.019,3.382-10.35L176.008,52.335z",
+                    "duration": 1400
+                },
+                {
+                    "path": "M262.956,0.706v80.267h-15.23V46.278h-37.634v34.694h-15.229V0.706h15.229v32.753h37.634V0.706H262.956z",
+                    "duration": 600
+                },
+                {
+                    "path": "M47.524,129.58h9.489l0.066,3.524c0,13.874-9.082,20.808-27.246,20.808c-11.658,0-19.36-2.19-23.111-6.573        c-3.752-4.382-5.627-13.421-5.627-27.111c0-12.833,1.91-21.542,5.729-26.13c3.82-4.585,11.083-6.878,21.79-6.878        c10.529,0,17.712,1.548,21.555,4.644c3.84,3.094,5.762,8.912,5.762,17.451h-9.49v-1.693c0-5.016-1.242-8.359-3.728-10.031        s-7.434-2.509-14.844-2.509c-7.141,0-11.726,1.581-13.758,4.744c-2.035,3.164-3.051,10.259-3.051,21.283        c0,10.754,1.162,17.601,3.491,20.536c2.328,2.938,7.763,4.406,16.301,4.406c7.231,0,11.814-0.959,13.76-2.881        C46.552,141.248,47.524,136.719,47.524,129.58z",
+                    "duration": 1300
+                },
+                {
+                    "path": "M73.254,106.332H63.83c0-7.547,1.708-12.618,5.119-15.217c3.414-2.597,10.09-3.896,20.027-3.896        c10.803,0,18.1,1.592,21.895,4.778c3.796,3.186,5.693,9.251,5.693,18.197v42.771h-9.488l0.745-6.982l-0.204-0.07        c-3.614,5.334-10.958,7.999-22.027,7.999c-16.359,0-24.536-6.573-24.536-19.723c0-7.816,1.831-13.218,5.489-16.199        c3.659-2.981,10.278-4.475,19.858-4.475c11.389,0,18.21,2.238,20.471,6.712l0.204-0.067v-7.862        c0-7.411-1.02-12.212-3.049-14.403c-2.038-2.191-6.484-3.288-13.354-3.288c-11.658,0-17.488,3.276-17.488,9.827        C73.186,104.749,73.208,105.384,73.254,106.332z M88.503,120.904c-7.277,0-12.007,0.77-14.199,2.306        c-2.192,1.534-3.287,4.832-3.287,9.895c0,5.242,1.085,8.709,3.253,10.405c2.171,1.693,6.576,2.541,13.218,2.541        c13.376,0,20.063-4.068,20.063-12.2c0-5.105-1.301-8.541-3.898-10.303C101.052,121.785,96.003,120.904,88.503,120.904z",
+                    "duration": 1800
+                },
+                {
+                    "path": "M121.975,88.168h9.491l-0.204,9.761l0.204,0.203c3.66-7.274,10.709-10.912,21.146-10.912        c10.98,0,17.646,3.638,19.995,10.912h0.269c4.069-7.274,11.501-10.912,22.302-10.912c15.271,0,22.909,7.794,22.909,23.382        v42.364h-9.491v-43.245c0-5.693-1.016-9.556-3.05-11.589c-2.03-2.034-5.876-3.051-11.521-3.051        c-7.502,0-12.584,1.413-15.254,4.235c-2.662,2.825-3.997,8.214-3.997,16.166v37.483h-9.489v-42.364l-0.137-2.98        c0-8.359-4.764-12.54-14.298-12.54c-12.924,0-19.385,7.026-19.385,21.079v36.806h-9.491V88.168z",
+                    "duration": 1000
+                },
+                {
+                    "path": "M224.449,88.168h9.486l-0.475,8.201l0.273,0.201c3.301-6.234,10.394-9.351,21.282-9.351        c9.625,0,16.244,2.439,19.861,7.319c3.613,4.881,5.42,13.872,5.42,26.976c0,12.156-1.83,20.594-5.49,25.315        c-3.66,4.721-10.166,7.082-19.52,7.082c-10.663,0-17.714-2.868-21.146-8.607h-0.206v35.447h-9.486V88.168z M252.375,95.081        c-7.594,0-12.542,1.638-14.844,4.913c-2.306,3.277-3.459,10.314-3.459,21.114c0,9.985,1.242,16.64,3.729,19.96        c2.483,3.322,7.476,4.982,14.98,4.982c7.139,0,11.85-1.604,14.131-4.813c2.281-3.208,3.424-9.828,3.424-19.858        c0-11.023-1.111-18.163-3.32-21.418C264.799,96.708,259.92,95.081,252.375,95.081z",
+                    "duration": 1300
+                },
+                {
+                    "path": "M74.41,159.974v20.778h-2.344v-16.624v-1.248l0.016-0.624l0.013-0.623h-0.062l-0.183,0.485       c-0.089,0.244-0.15,0.401-0.184,0.474l-0.392,0.974l-7.079,17.187h-2.345l-7.094-16.988l-0.412-0.959l-0.184-0.487       c-0.05-0.111-0.109-0.269-0.183-0.472h-0.062l0.015,0.562l0.017,0.579v1.141v16.624h-2.344v-20.778h4.065l5.539,13.442       l0.886,2.176l0.44,1.081l0.427,1.081h0.061l0.428-1.081c0.208-0.519,0.354-0.877,0.425-1.081l0.896-2.163l5.512-13.455H74.41z",
+                    "duration": 1000
+                },
+                {
+                    "path": "M86.096,161.952v7.079h10.547v1.979H86.096v7.764h11.008v1.978H83.752v-20.778h13.352v1.979H86.096z",
+                    "duration": 600
+                },
+                {
+                    "path": "M129.159,159.974v20.778h-2.346v-16.624v-1.248l0.017-0.624l0.013-0.623h-0.061l-0.184,0.485       c-0.089,0.244-0.149,0.401-0.183,0.474l-0.392,0.974l-7.08,17.187h-2.344l-7.097-16.988l-0.41-0.959l-0.183-0.487       c-0.05-0.111-0.111-0.269-0.184-0.472h-0.061l0.015,0.562l0.017,0.579v1.141v16.624h-2.347v-20.778h4.065l5.542,13.442       l0.883,2.176l0.443,1.081l0.426,1.081h0.062l0.425-1.081c0.211-0.519,0.356-0.877,0.427-1.081l0.895-2.163l5.515-13.455       H129.159z",
+                    "duration": 1000
+                },
+                {
+                    "path": "M139.335,180.752v-20.778h8.724h0.794c2.344,0,3.942,0.451,4.794,1.354c0.853,0.903,1.277,2.593,1.277,5.068       c0,2.375-0.444,3.993-1.333,4.858c-0.887,0.861-2.554,1.294-4.998,1.294l-0.913,0.014h-6.001v8.189H139.335z M141.679,170.585       h5.559c2.323,0,3.812-0.241,4.468-0.717c0.652-0.478,0.98-1.573,0.98-3.287c0-2.011-0.22-3.281-0.66-3.815       c-0.442-0.531-1.488-0.798-3.145-0.798l-0.896-0.016h-6.306V170.585z",
+                    "duration": 800
+                },
+                {
+                    "path": "M180.798,159.974v20.778h-2.344v-9.635h-12.146v9.635h-2.347v-20.778h2.347v9.164h12.146v-9.164H180.798z",
+                    "duration": 600
+                },
+                {
+                    "path": "M193.322,159.974v20.778h-2.344v-20.778H193.322z",
+                    "duration": 600
+                },
+                {
+                    "path": "M217.81,165.605h-2.327c0-1.674-0.28-2.736-0.838-3.188c-0.558-0.452-1.872-0.68-3.94-0.68       c-2.458,0-4.04,0.217-4.753,0.648c-0.71,0.431-1.066,1.392-1.066,2.885c0,1.674,0.278,2.694,0.84,3.059       c0.557,0.366,2.217,0.614,4.979,0.746c3.236,0.142,5.294,0.553,6.168,1.233c0.881,0.681,1.32,2.202,1.32,4.567       c0,2.556-0.506,4.213-1.516,4.963c-1.011,0.751-3.238,1.126-6.691,1.126c-2.992,0-4.984-0.376-5.973-1.133       c-0.991-0.756-1.486-2.281-1.486-4.574l-0.013-0.93h2.326v0.516c0,1.858,0.286,3.016,0.853,3.466       c0.569,0.453,2.024,0.676,4.37,0.676c2.692,0,4.344-0.223,4.964-0.676c0.619-0.45,0.928-1.659,0.928-3.616       c0-1.269-0.208-2.112-0.635-2.534c-0.416-0.42-1.297-0.672-2.637-0.755l-2.437-0.121l-2.315-0.122       c-3.524-0.244-5.282-2.07-5.282-5.481c0-2.363,0.513-3.942,1.538-4.734c1.025-0.791,3.068-1.187,6.135-1.187       c3.106,0,5.133,0.369,6.075,1.104C217.34,161.6,217.81,163.181,217.81,165.605z",
+                    "duration": 1800
+                },
+                {
+                    "path": "M300.129,91.768c-0.105-0.818-0.174-1.607-0.314-2.381c-0.912-5.045-3.242-9.405-6.498-13.294       c-2.049-2.448-4.404-4.575-7.072-6.345c-3.408-2.262-7.086-3.852-11.164-4.424c-0.805-0.113-1.621-0.146-2.432-0.217       c-0.346,2.091-0.676,4.098-1.025,6.219c0.133-0.042,0.201-0.078,0.273-0.083c2.738-0.198,5.342,0.37,7.832,1.455       c4.863,2.117,8.619,5.513,11.385,10.015c1.793,2.918,2.883,6.07,2.949,9.534c0.002,0.081,0.033,0.161,0.055,0.261       C296.12,92.262,298.096,92.019,300.129,91.768z M269.85,82.026c5.58,0.708,11.236,5.415,12.41,11.931       c1.721-0.212,3.441-0.423,5.162-0.636c-1.033-8.509-8.441-15.616-16.721-16.424C270.418,78.598,270.137,80.3,269.85,82.026z",
+                    "duration": 1400
+                },
+                {
+                    "path": "M311.989,90.371c-0.975,0.103-1.947,0.198-2.918,0.309       c-0.992,0.111-1.98,0.238-3.012,0.364c-0.018-0.513-0.023-1.002-0.055-1.49c-0.311-4.729-1.955-9.01-4.367-13.026       c-2.053-3.416-4.604-6.424-7.578-9.061c-3.877-3.436-8.217-6.088-13.213-7.582c-2.129-0.637-4.305-1.016-6.537-1.018       c-0.188-0.001-0.377,0.057-0.633,0.1c0.094-0.589,0.168-1.03,0.236-1.475c0.232-1.46,0.459-2.92,0.688-4.381       c0.021-0.021,0.043-0.042,0.064-0.063c2.893,0.179,5.727,0.685,8.49,1.556c5.27,1.662,9.986,4.325,14.197,7.89       c0.398,0.337,0.811,0.659,1.215,0.989c1.018,1.016,2.031,2.031,3.049,3.048c0.08,0.12,0.146,0.253,0.244,0.359       c1.771,1.958,3.332,4.073,4.693,6.337c3.018,5.012,4.934,10.396,5.441,16.255c0.023,0.258,0.078,0.511,0.119,0.766       C312.071,90.289,312.03,90.33,311.989,90.371z",
+                    "duration": 1400
+                },
+                {
+                    "path": "M300.129,91.768c-2.033,0.251-4.01,0.494-6.012,0.74       c-0.021-0.1-0.053-0.18-0.055-0.261c-0.066-3.464-1.156-6.616-2.949-9.534c-2.766-4.502-6.521-7.897-11.385-10.015       c-2.49-1.085-5.094-1.653-7.832-1.455c-0.072,0.005-0.141,0.041-0.273,0.083c0.35-2.121,0.68-4.128,1.025-6.219       c0.811,0.071,1.627,0.104,2.432,0.217c4.078,0.572,7.756,2.162,11.164,4.424c2.668,1.77,5.023,3.896,7.072,6.345       c3.256,3.889,5.586,8.249,6.498,13.294C299.956,90.16,300.024,90.949,300.129,91.768z",
+                    "duration": 1000
+                },
+                {
+                    "path": "M269.85,82.026c0.287-1.727,0.568-3.429,0.852-5.129       c8.279,0.808,15.688,7.915,16.721,16.424c-1.721,0.213-3.441,0.424-5.162,0.636C281.086,87.441,275.43,82.734,269.85,82.026z",
+                    "duration": 600
+                }
+            ],
+            "dimensions": {
+                "width": 400,
+                "height": 400
+            }
+        }
+    };
 
 
-        /*
-         Setup and Paint your lazyline!
-         */
+    /*
+     Setup and Paint your lazyline!
+     */
 
-        $( document ).ready( function() {
-            $( '#techcamplogo' ).lazylinepainter(
-                    {
-                        "svgData": pathObj,
-                        "strokeWidth": 2,
-                        "strokeColor": "#fff"
-                    } ).lazylinepainter( 'paint' );
-        } );
-        /*
-         Setup and Paint your lazyline!
-         */
+    $( document ).ready( function() {
+        $( '#techcamplogo' ).lazylinepainter(
+                {
+                    "svgData": pathObj,
+                    "strokeWidth": 2,
+                    "strokeColor": "#fff"
+                } ).lazylinepainter( 'paint' );
+    } );
+    /*
+     Setup and Paint your lazyline!
+     */
 
 
-    })( jQuery )
+})( jQuery )
 </script>
+</section>
+
+<section class="slide no-flex">
+    <h2>Designer Tools besides illustrator</h2>
+    <ul>
+        <li><a href="https://inkscape.org/en/">InkScape</a></li>
+        <li><a href="http://bohemiancoding.com/sketch/">Sketch</a></li>
+        <li><a href="https://code.google.com/p/svg-edit/">svg-edit</a></li>
+    </ul>
+</section>
+
+<section class="slide no-flex">
+    <h2>More Resources</h2>
+    <p><a href="http://vimeo.com/99828116">Chris Coyier – SVG Is For Everybody</a></p>
+    <p><a href="http://sarasoueidan.com/articles.html">Sara Soueidan</a> <a href="http://sarasoueidan.com/blog/svg-coordinate-systems/">Understanding Viewbox</a></p>
+    <p><a href="http://product.voxmedia.com/2013/11/25/5426880/polygon-feature-design-svg-animations-for-fun-and-profit">Polygon's Feature Design</a></p>
+    <p><a href="http://www.w3.org/TR/SVG/">SVG Spec</a></p>
+    <p><a href="https://www.youtube.com/watch?v=SeLOt_BRAqc">Dmitry Baranovskiy - You Don't Know SVG</a></p>
 </section>
 
 <footer class="slide no-flex">
